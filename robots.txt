@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.biocce.com/sitemap.xml
+
+# Disallow admin or private areas
+Disallow: /cdn-cgi/

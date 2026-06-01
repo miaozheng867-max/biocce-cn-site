@@ -1,0 +1,102 @@
+[
+  {
+    "id": 10468006,
+    "name": "BD 50/50 C Bp Classic *KAP",
+    "model": "BD 50/50 C Bp Classic",
+    "partnumber": "11270070",
+    "category": "洗地机/洗地吸干机",
+    "subcategory": "紧凑式手推式洗地机",
+    "image": "https://s1.kaercher-media.com/mam/11270070/mainproduct/78051/d0.jpg",
+    "price": "¥10,499.00",
+    "description": "手推式（紧凑型），主刷工作宽度：510 mm，实际工作效率：2000 m²/h。电池驱动，适合中小型区域的快速灵活清洁。",
+    "specs": {
+      "工作宽度": "510 mm",
+      "工作效率": "2000 m²/h",
+      "清水箱容量": "50 L",
+      "污水箱容量": "50 L",
+      "驱动方式": "电池驱动"
+    },
+    "url": "/cn/professional/floor-scrubbers-scrubber-driers/compact-push-scrubber-driers/bd-50-50-c-bp-classic-kap-11270070.html",
+    "slug": "bd-50-50-c-bp-classic"
+  },
+  {
+    "id": 10434550,
+    "name": "NT 50/1 Tact Te L",
+    "model": "NT 50/1 Tact Te",
+    "partnumber": "11484110",
+    "category": "真空吸尘器",
+    "subcategory": "干湿两用吸尘器",
+    "image": "https://s1.kaercher-media.com/mam/11484110/mainproduct/75320/d0.jpg",
+    "price": "¥3,999.00",
+    "description": "专业级干湿两用吸尘器NT 50/1 Tact Te，搭载50升的尘箱，可调节的推杆，排水软管，以及集成电源插座。",
+    "specs": {
+      "尘箱容量": "50 L",
+      "功率": "1380 W",
+      "真空度": "235 mbar",
+      "吸管长度": "4 m",
+      "过滤面积": "3360 cm²"
+    },
+    "url": "/cn/professional/vacuums/wet-and-dry-vacuum-cleaners/tact-class/nt-50-1-tact-te-l-11484110.html",
+    "slug": "nt-50-1-tact-te"
+  },
+  {
+    "id": 12869130,
+    "name": "HD 10/25-4 S Plus",
+    "model": "HD 10/25-4 S Plus",
+    "partnumber": "12869130",
+    "category": "高压清洗机",
+    "subcategory": "冷水高压清洗机",
+    "image": "https://s1.kaercher-media.com/mam/12869130/mainproduct/74866/d0.jpg",
+    "price": "¥18,999.00",
+    "description": "搭载EASY!Force高压枪柄，压力控制开关和伺服控制的HD 10/25-4 S Plus是一款直立式设计的冷水高压清洗机。",
+    "specs": {
+      "工作压力": "250 bar",
+      "水流量": "1000 L/h",
+      "功率": "9.2 kW",
+      "重量": "61 kg",
+      "最高进水温度": "60 °C"
+    },
+    "url": "/cn/professional/high-pressure-cleaners/cold-water-high-pressure-cleaners/super-class/hd-10-25-4-s-plus-12869130.html",
+    "slug": "hd-10-25-4-s-plus"
+  },
+  {
+    "id": 10202612,
+    "name": "KM 150/500 R D",
+    "model": "KM 150/500 R D",
+    "partnumber": "11861240",
+    "category": "扫地机",
+    "subcategory": "驾驶式扫地车",
+    "image": "https://s1.kaercher-media.com/mam/11861240/mainproduct/38142/d0.jpg",
+    "price": "咨询报价",
+    "description": "柴油驱动，全液压配置的工业级扫地车。由后轮驱动的三轮设计。适用于复杂苛刻的工况，例如建筑工地、金属制造、锻造工厂和其他多尘的环境。",
+    "specs": {
+      "清扫宽度": "1500 mm",
+      "工作效率": "18000 m²/h",
+      "尘箱容量": "500 L",
+      "驱动方式": "柴油驱动",
+      "爬坡能力": "18%"
+    },
+    "url": "/cn/professional/sweepers-and-vacuum-sweepers/vacuum-sweepers-ride-on/km-150-500-r-d-11861240.html",
+    "slug": "km-150-500-r-d"
+  },
+  {
+    "id": 10402712,
+    "name": "SG 4/4",
+    "model": "SG 4/4",
+    "partnumber": "10921040",
+    "category": "蒸汽清洁机",
+    "subcategory": "蒸汽清洁机",
+    "image": "https://s1.kaercher-media.com/mam/10921040/mainproduct/57031/d0.jpg",
+    "price": "¥6,999.00",
+    "description": "紧凑型SG 4/4蒸汽清洁机达到4巴蒸汽压力，与强大的实验室中蒸汽压力。采用连续蒸汽流量控制和VapoHydro功能，可以不使用化学物质就可以达到令人满意的清洗结果。",
+    "specs": {
+      "蒸汽压力": "4 bar",
+      "锅炉容量": "2.4 L",
+      "功率": "2300 W",
+      "重量": "14 kg",
+      "连续蒸汽": "是"
+    },
+    "url": "/cn/professional/steam-cleaners-steam-vacuum-cleaners/steam-cleaners/sg-4-4-10921040.html",
+    "slug": "sg-4-4"
+  }
+]
