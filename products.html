@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>拜茨清洁设备 - 清洁设备与清洁用品一站式解决方案 | 产品总览</title>
+<title>产品中心 — 拜茨清洁设备 | 全系列工商业清洁设备</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="拜茨清洁设备 - 清洁设备与清洁用品一站式解决方案 | 产品总览">
-<meta property="og:description" content="拜茨清洁设备是专业清洁设备与清洁用品一站式供应商，提供工业级洗地机、高压清洗机、工业吸尘器、扫地机、蒸汽清洁机等全系列清洁设备。">
+<meta property="og:title" content="产品中心 — 拜茨清洁设备">
+<meta property="og:description" content="拜茨清洁设备产品中心 — 洗地机、高压清洗机、工业吸尘器、扫地机、蒸汽清洁机等全系列工商业清洁设备，专业选型一站式采购。">
 <meta property="og:url" content="https://www.biocce.cn/products">
 <meta property="og:image" content="https://www.biocce.cn/images/about-factory.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.biocce.cn/products">
-<meta name="description" content="拜茨清洁设备是专业清洁设备与清洁用品一站式供应商，提供工业级洗地机、高压清洗机、工业吸尘器、扫地机、蒸汽清洁机等全系列清洁设备。">
-<!-- Search Engine Verification (pending IDs) -->
+<meta name="description" content="拜茨清洁设备产品中心 — 洗地机、高压清洗机、工业吸尘器、扫地机、蒸汽清洁机等全系列工商业清洁设备，专业选型一站式采购。">
+<!-- Search Engine Verification -->
 <meta name="google-site-verification" content="INSERT_GOOGLE_VERIFICATION_CODE" />
 <meta name="baidu-site-verification" content="INSERT_BAIDU_VERIFICATION_CODE" />
 <meta name="msvalidate.01" content="INSERT_BING_VERIFICATION_CODE" />
@@ -47,63 +47,210 @@ src="https://www.facebook.com/tr?id=1335346435408082&ev=PageView&noscript=1"
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="design-system.css">
 <style>
-/* 产品总览页面专用 */
-.content{max-width:1200px;margin:0 auto;padding:32px 24px 48px}
+/* ===== 产品中心专用：左侧导航 + 右侧内容 ===== */
+.products-layout{
+  display:flex;gap:0;max-width:1200px;margin:0 auto;padding:0 24px 48px;
+  min-height:calc(100vh - 64px - 360px);
+}
 
-/* 分类网格 — 自适应卡片布局 */
-.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+/* ---- 左侧分类导航 ---- */
+.sidebar{
+  width:240px;flex-shrink:0;
+  border-right:1px solid var(--border);
+  padding:24px 16px 24px 0;
+  position:sticky;top:88px;align-self:flex-start;
+  max-height:calc(100vh - 100px);
+  overflow-y:auto;
+}
+.sidebar h3{
+  font-size:14px;font-weight:600;color:var(--text-secondary);
+  letter-spacing:1.5px;text-transform:uppercase;
+  margin-bottom:16px;padding-left:4px;
+}
 
-.cat-card{background:var(--card);border-radius:12px;overflow:hidden;border:1px solid var(--border);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
-.cat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.cat-card .cat-img-wrap{aspect-ratio:16/9;background:#f5f5f5;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.cat-card .cat-img-wrap img{max-width:80%;max-height:80%;object-fit:contain;display:block}
-.cat-card .cat-img-wrap .cat-placeholder{color:var(--text-light);font-size:42px;opacity:.5}
-.cat-card .cat-info{padding:20px;display:flex;flex-direction:column;flex:1}
-.cat-card .cat-info h3{font-size:18px;font-weight:600;margin-bottom:6px}
-.cat-card .cat-info .cat-desc{font-size:14px;color:var(--text-secondary);line-height:1.5;margin-bottom:16px;flex:1}
-.cat-card .cat-info .cat-meta{font-size:13px;color:var(--text-light);margin-bottom:12px}
-.cat-card .cat-info .cat-price{font-size:14px;color:var(--accent);font-weight:600;margin-bottom:12px}
-.cat-card .cat-info .cat-btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:10px 24px;background:var(--primary);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;text-decoration:none;transition:background .2s}
-.cat-card .cat-info .cat-btn:hover{background:var(--primary-dark, #1a3a4a)}
-.cat-card .cat-info .cat-btn.disabled{background:#ccc;cursor:not-allowed;pointer-events:none}
+/* 分类导航项 */
+.cat-nav{list-style:none;margin:0;padding:0}
+.cat-nav li{margin-bottom:2px}
+.cat-nav .cat-parent{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:8px 10px;border-radius:8px;
+  font-size:14px;font-weight:500;color:var(--text);
+  cursor:pointer;transition:all .15s;
+  user-select:none;
+}
+.cat-nav .cat-parent:hover{background:var(--bg)}
+.cat-nav .cat-parent.active{background:rgba(26,58,74,0.08);color:var(--primary);font-weight:600}
+.cat-nav .cat-parent .arrow{
+  font-size:10px;color:var(--text-light);
+  transition:transform .2s;
+}
+.cat-nav .cat-parent .arrow.open{transform:rotate(90deg)}
 
-/* 即将上线占位 */
-.cat-card.coming-soon{opacity:.6}
-.cat-card.coming-soon .cat-img-wrap{background:#f0f0f0}
-.cat-card.coming-soon .cat-info .cat-btn{background:#bbb}
+/* 子分类 */
+.cat-nav .sub-list{
+  list-style:none;margin:0;padding:0 0 4px 16px;
+  overflow:hidden;max-height:0;transition:max-height .25s ease;
+}
+.cat-nav .sub-list.open{max-height:400px}
+.cat-nav .sub-list li{
+  padding:6px 10px;font-size:13px;color:var(--text-secondary);
+  cursor:pointer;border-radius:6px;transition:all .15s;
+}
+.cat-nav .sub-list li:hover{color:var(--primary);background:var(--bg)}
+.cat-nav .sub-list li.active{color:var(--primary);font-weight:600;background:rgba(26,58,74,0.06)}
 
-/* 产品小卡片（在品类卡片内展示样例） */
-.sample-list{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
-.sample-item{font-size:12px;color:var(--text-secondary);display:flex;justify-content:space-between;align-items:center;padding:4px 8px;background:#f8f9fa;border-radius:4px}
-.sample-item .sample-name{font-weight:500}
-.sample-item .sample-price{color:var(--accent)}
+/* 分类计数气泡 */
+.cat-nav .badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:18px;height:18px;padding:0 5px;
+  border-radius:9px;background:var(--border);
+  font-size:11px;color:var(--text-light);font-weight:500;
+  margin-left:auto;
+}
+.cat-nav .cat-parent.active .badge{background:var(--primary);color:#fff}
 
-/* 页首说明 */
-.page-header{text-align:center;margin-bottom:40px}
-.page-header h1{font-size:32px;font-weight:700;margin-bottom:12px}
-.page-header p{font-size:16px;color:var(--text-secondary);max-width:640px;margin:0 auto;line-height:1.6}
+/* ---- 右侧产品区域 ---- */
+.product-area{
+  flex:1;padding:24px 0 24px 24px;
+  min-width:0;
+}
 
-/* 更多优惠提示 */
-.price-hint{font-size:12px;color:var(--text-light);margin-top:4px}
+/* 当前分类标题 */
+.product-area .category-header{
+  margin-bottom:20px;
+}
+.product-area .category-header h2{
+  font-size:22px;font-weight:600;color:var(--primary);
+  margin-bottom:4px;
+}
+.product-area .category-header p{
+  font-size:14px;color:var(--text-secondary);
+  max-width:600px;
+}
+
+/* 产品网格 */
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:16px;
+}
+
+/* 产品卡片 — 无品牌图片，纯文字卡片 */
+.product-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:0;
+  overflow:hidden;
+  transition:transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column;
+}
+.product-card:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+
+/* 纯色图片占位 — 突出品牌中性 */
+.product-card .card-img{
+  height:140px;
+  background:#f0f2f5;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.product-card .card-img .icon-placeholder{
+  font-size:36px;opacity:.25;
+  filter:grayscale(1);
+}
+.product-card .card-body{
+  padding:14px 16px 16px;
+  flex:1;display:flex;flex-direction:column;
+}
+.product-card .card-body h4{
+  font-size:14px;font-weight:600;color:var(--text);
+  margin-bottom:4px;line-height:1.4;
+}
+.product-card .card-body .product-model{
+  font-size:12px;color:var(--text-light);
+  margin-bottom:8px;
+}
+.product-card .card-body .product-desc{
+  font-size:12px;color:var(--text-secondary);
+  line-height:1.5;margin-bottom:10px;
+  flex:1;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;
+}
+.product-card .card-body .product-price{
+  font-size:14px;font-weight:700;color:var(--accent);
+  margin-bottom:4px;
+}
+.product-card .card-body .price-hint{
+  font-size:11px;color:var(--text-light);
+  margin-bottom:10px;
+}
+.product-card .card-body .card-btn{
+  display:inline-block;padding:8px 16px;
+  background:var(--primary);color:#fff;
+  border-radius:6px;font-size:13px;font-weight:500;
+  text-align:center;text-decoration:none;
+  transition:background .2s;
+  margin-top:auto;
+}
+.product-card .card-body .card-btn:hover{background:var(--primary-hover)}
+
+/* 空状态 & 加载 */
+.empty-state{
+  text-align:center;padding:60px 20px;
+  color:var(--text-light);
+}
+.empty-state .icon{font-size:48px;margin-bottom:12px;opacity:.4}
+.empty-state p{font-size:14px}
+
+/* 筛选/排序栏 */
+.toolbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:16px;flex-wrap:wrap;gap:8px;
+}
+.toolbar .product-count{
+  font-size:13px;color:var(--text-secondary);
+}
+.toolbar select{
+  padding:6px 12px;border:1px solid var(--border);
+  border-radius:6px;font-size:13px;color:var(--text);
+  background:var(--card);cursor:pointer;outline:none;
+  font-family:inherit;
+}
 
 /* 响应式 */
-@media(max-width:768px){
-  .cat-grid{grid-template-columns:1fr}
-  .page-header h1{font-size:26px}
+@media(max-width:900px){
+  .products-layout{flex-direction:column;padding:0 16px 32px}
+  .sidebar{
+    width:100%;position:static;
+    border-right:none;border-bottom:1px solid var(--border);
+    padding:16px 0;max-height:none;overflow:visible;
+  }
+  .sidebar h3{display:none}
+  .cat-nav{display:flex;flex-wrap:wrap;gap:6px}
+  .cat-nav li{width:100%}
+  .cat-nav .cat-parent{font-size:13px;padding:6px 10px}
+  .cat-nav .sub-list{padding-left:16px}
+  .product-area{padding:16px 0}
+  .product-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+}
+@media(max-width:480px){
+  .product-grid{grid-template-columns:1fr}
 }
 </style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "拜茨清洁设备 - 清洁设备与清洁用品一站式解决方案 | 产品总览",
-  "description": "拜茨清洁设备是专业清洁设备与清洁用品一站式供应商，提供工业级洗地机、高压清洗机、工业吸尘器、扫地机、蒸汽清洁机等全系列清洁设备。",
+  "name": "产品中心 — 拜茨清洁设备",
+  "description": "拜茨清洁设备产品中心 — 洗地机、高压清洗机、工业吸尘器、扫地机、蒸汽清洁机等全系列工商业清洁设备。",
   "url": "https://www.biocce.cn/products",
   "mainEntity": {
     "@type": "Organization",
     "name": "拜茨清洁设备",
-    "url": "https://www.biocce.cn",
-    "logo": "https://www.biocce.cn/images/biocce-logo.png"
+    "url": "https://www.biocce.cn"
   }
 }
 </script>
@@ -136,8 +283,8 @@ src="https://www.facebook.com/tr?id=1335346435408082&ev=PageView&noscript=1"
   <div class="hero-banner">
     <div class="hero-inner">
       <div class="hero-text">
-        <h1 style="margin-top:28px">产品总览</h1>
-        <p>一站式清洁解决方案 — 全系列工商业清洁设备，专业选型，整机销售</p>
+        <h1 style="margin-top:28px">产品中心</h1>
+        <p>全系列工商业清洁设备 — 洗地机、高压清洗机、工业吸尘器、扫地机等专业设备，一站式选型采购</p>
         <div class="hero-btns">
           <a href="https://wa.me/8618621559605?text=您好%20拜茨%2C%20我想咨询清洁设备产品。" target="_blank" class="btn btn-primary" rel="noopener noreferrer">获取报价</a>
           <a href="mailto:michael@biocce.com" class="btn btn-outline">发送邮件</a>
@@ -147,15 +294,36 @@ src="https://www.facebook.com/tr?id=1335346435408082&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- Product Categories Overview -->
-<section class="content">
-  <div class="page-header">
-    <h1>全系列产品分类</h1>
-    <p>拜茨清洁设备为您提供工商业全系列清洁设备与清洁用品。以下展示核心品类及代表产品，更多品类即将上线。</p>
-  </div>
-  <div class="cat-grid" id="catGrid"></div>
-</section>
+<!-- 产品中心：左侧导航 + 右侧内容 -->
+<div class="products-layout">
 
+  <!-- ===== 左侧分类导航 ===== -->
+  <aside class="sidebar" id="sidebar">
+    <h3>产品分类</h3>
+    <ul class="cat-nav" id="catNav"></ul>
+  </aside>
+
+  <!-- ===== 右侧产品区 ===== -->
+  <main class="product-area" id="productArea">
+    <div class="category-header" id="catHeader">
+      <h2 id="currentCatTitle">全部分类</h2>
+      <p id="currentCatDesc">请从左侧选择产品分类，查看对应产品型号与参数</p>
+    </div>
+    <div class="toolbar">
+      <span class="product-count" id="productCount">共 0 个产品</span>
+      <select id="sortSelect" onchange="sortProducts(this.value)">
+        <option value="default">默认排序</option>
+        <option value="name">按名称排序</option>
+        <option value="price-asc">价格从低到高</option>
+        <option value="price-desc">价格从高到低</option>
+      </select>
+    </div>
+    <div class="product-grid" id="productGrid">
+      <div class="empty-state">
+        <div class="icon">📦</div>
+        <p>请选择分类查看产品</p>
+      </div>
+    </div>
 <!-- Footer -->
 <footer>
   <div class="footer-inner">
@@ -176,11 +344,11 @@ src="https://www.facebook.com/tr?id=1335346435408082&ev=PageView&noscript=1"
     <div>
       <h4>产品分类</h4>
       <ul>
-        <li><a href="#scrubber">洗地机/洗地吸干机</a></li>
-        <li><a href="#pressure-washer">高压清洗机</a></li>
-        <li><a href="#vacuum">工业吸尘器</a></li>
-        <li><a href="#sweeper">扫地机</a></li>
-        <li><a href="#steam">蒸汽清洁机</a></li>
+        <li><a href="#" onclick="selectCategory('scrubber');return false">洗地机</a></li>
+        <li><a href="#" onclick="selectCategory('pressure-washer');return false">高压清洗机</a></li>
+        <li><a href="#" onclick="selectCategory('vacuum');return false">工业吸尘器</a></li>
+        <li><a href="#" onclick="selectCategory('sweeper');return false">扫地机</a></li>
+        <li><a href="#" onclick="selectCategory('steam');return false">蒸汽/干冰清洁机</a></li>
       </ul>
     </div>
     <div>
@@ -225,7 +393,6 @@ src="https://www.facebook.com/tr?id=1335346435408082&ev=PageView&noscript=1"
       </div>
     </div>
   </div>
-
   <div class="footer-bottom">
     <span>&copy; 2026 拜茨供应链管理有限公司 版权所有.</span>
     <span><a href="/">biocce.cn</a></span>
@@ -238,140 +405,210 @@ src="https://www.facebook.com/tr?id=1335346435408082&ev=PageView&noscript=1"
 </a>
 
 <script>
-// 产品分类数据（从 products-data.json 提取）
+// =============================================
+// 产品分类层级数据（品牌中性）
+// =============================================
 var categories = [
-  {
-    id: "scrubber",
-    name: "洗地机/洗地吸干机",
-    desc: "紧凑式、手推式、驾驶式全系列洗地机，适合车间、仓库、商场等硬质地面清洁。",
-    image: "https://s1.kaercher-media.com/mam/11270070/mainproduct/78051/d0.jpg",
-    samples: [
-      {name: "BD 50/50 C Bp Classic", price: "¥10,499.00"},
-      {name: "更多紧凑/手推/驾驶式型号"}
-    ],
-    link: "#",
-    price: "¥10,499起"
-  },
-  {
-    id: "pressure-washer",
-    name: "高压清洗机",
-    desc: "冷水/热水/超高压清洗机，适用于工业设备清洗、建筑外墙、车辆等场景。",
-    image: "https://s1.kaercher-media.com/mam/12869130/mainproduct/74866/d0.jpg",
-    samples: [
-      {name: "HD 10/25-4 S Plus", price: "¥18,999.00"},
-      {name: "更多冷水/热水型号"}
-    ],
-    link: "#",
-    price: "¥3,999起"
-  },
-  {
-    id: "vacuum",
-    name: "工业吸尘器",
-    desc: "专业干湿两用吸尘器，多级别过滤，适合工厂车间、仓库等环境。",
-    image: "https://s1.kaercher-media.com/mam/11484110/mainproduct/75320/d0.jpg",
-    samples: [
-      {name: "NT 50/1 Tact Te", price: "¥3,999.00"},
-      {name: "更多干湿两用型号"}
-    ],
-    link: "#",
-    price: "¥3,999起"
-  },
-  {
-    id: "sweeper",
-    name: "扫地机",
-    desc: "手推式/驾驶式扫地车，工业级清扫效率，适用于大面积场地、道路、厂区。",
-    image: "https://s1.kaercher-media.com/mam/11861240/mainproduct/38142/d0.jpg",
-    samples: [
-      {name: "KM 150/500 R D", price: "咨询报价"},
-      {name: "更多手推/驾驶式型号"}
-    ],
-    link: "#",
-    price: "咨询报价"
-  },
-  {
-    id: "steam",
-    name: "蒸汽清洁机",
-    desc: "高温蒸汽清洁，无需化学药剂，适合食品加工、厨房、医疗等卫生要求高的场所。",
-    image: "https://s1.kaercher-media.com/mam/10921040/mainproduct/57031/d0.jpg",
-    samples: [
-      {name: "SG 4/4", price: "¥6,999.00"},
-      {name: "更多蒸汽清洁型号"}
-    ],
-    link: "#",
-    price: "¥6,999起"
-  },
-  {id:"carpet",name:"地毯清洗机",desc:"",image:"",samples:[],link:"#",coming:true},
-  {id:"dry-ice",name:"干冰清洗机",desc:"",image:"",samples:[],link:"#",coming:true},
-  {id:"parts-washer",name:"零部件清洗机",desc:"",image:"",samples:[],link:"#",coming:true},
-  {id:"tank",name:"罐体清洗系统",desc:"",image:"",samples:[],link:"#",coming:true},
-  {id:"air-purifier",name:"空气净化器",desc:"",image:"",samples:[],link:"#",coming:true},
-  {id:"accessories",name:"附件",desc:"",image:"",samples:[],link:"#",coming:true},
-  {id:"chemicals",name:"清洁剂和护理剂",desc:"",image:"",samples:[],link:"#",coming:true},
-  {id:"municipal",name:"扫地车（市政环卫）",desc:"",image:"",samples:[],link:"#",coming:true},
-  {id:"heater",name:"热水加热器",desc:"",image:"",samples:[],link:"#",coming:true}
+  { id:"scrubber", name:"洗地机", desc:"紧凑式、手推式、驾驶式全系列洗地机，适合车间、仓库、商场、超市等硬质地面清洁。", icon:"🧹",
+    subs:[
+      { id:"scrubber-compact", name:"紧凑式手推式洗地机", count:3 },
+      { id:"scrubber-walk", name:"手推式洗地吸干机", count:3 },
+      { id:"scrubber-ride", name:"驾驶式/站立式洗地吸干机", count:4 }
+    ] },
+  { id:"pressure-washer", name:"高压清洗机", desc:"冷水/热水高压清洗机，适用于工业设备清洗、建筑外墙、车辆、地面等场景。", icon:"💦",
+    subs:[
+      { id:"pw-cold", name:"冷水高压清洗机", count:1 },
+      { id:"pw-hot-mid", name:"热水-中级型", count:4 },
+      { id:"pw-hot-super", name:"热水-超级型", count:2 }
+    ] },
+  { id:"vacuum", name:"工业吸尘器", desc:"专业干湿两用吸尘器，多级别过滤，适合工厂车间、仓库、建筑工地等环境。", icon:"🌀",
+    subs:[
+      { id:"vacuum-standard", name:"干湿两用-Standard", count:6 },
+      { id:"vacuum-ap", name:"干湿两用-AP", count:2 }
+    ] },
+  { id:"sweeper", name:"扫地机", desc:"手推式/驾驶式扫地车，工业级清扫效率，适用于大面积场地、道路、厂区。", icon:"🧽",
+    subs:[
+      { id:"sweeper-walk", name:"手推式扫地机", count:0 },
+      { id:"sweeper-ride", name:"驾驶式扫地车", count:2 }
+    ] },
+  { id:"steam", name:"蒸汽/干冰清洁机", desc:"高温蒸汽清洁、干冰清洗，无需化学药剂，适合食品加工、模具、电子等行业。", icon:"☁️",
+    subs:[
+      { id:"steam-cleaner", name:"蒸汽清洁机", count:1 },
+      { id:"dry-ice", name:"干冰清洗机", count:2 }
+    ] },
+  { id:"more", name:"更多品类", desc:"地毯清洗机、零部件清洗机、罐体清洗系统、附件、清洁剂等陆续上线中。", icon:"📋", coming:true,
+    subs:[
+      { id:"carpet", name:"地毯清洗机" }, { id:"parts-washer", name:"零部件清洗机" },
+      { id:"tank", name:"罐体清洗系统" }, { id:"air-purifier", name:"空气净化器" },
+      { id:"accessories", name:"附件" }, { id:"chemicals", name:"清洁剂和护理剂" }
+    ] }
 ];
 
-function renderCategories() {
+// =============================================
+// 产品数据
+// =============================================
+var allProducts = [
+  // 洗地机-紧凑式
+  { n:"BR 30/4 C Ep", m:"BR 30/4 C Ep", c:"scrubber", s:"scrubber-compact", p:"咨询报价", d:"紧凑型洗地吸干机，重11.5kg，适合20~200㎡区域快速清洁。" },
+  { n:"BD 30/4 C Bp Pack Li", m:"BD 30/4 C Bp Pack Li", c:"scrubber", s:"scrubber-compact", p:"咨询报价", d:"超紧凑电池驱动洗地机，仅20kg，适合300㎡以内区域快速清洁。" },
+  { n:"BD 50/50 C Bp Classic", m:"BD 50/50 C Bp Classic", c:"scrubber", s:"scrubber-compact", p:"¥10,499", d:"手推式紧凑型洗地机，工作宽度510mm，效率2000m²/h，电池驱动。" },
+  // 洗地机-手推式
+  { n:"BD 43/25 C Bp", m:"BD 43/25 C Bp", c:"scrubber", s:"scrubber-walk", p:"咨询报价", d:"电池驱动手推式洗地机，盘刷技术，清洁效率1700m²/h，适合900㎡以内区域。" },
+  { n:"BD 50/55 W Classic Bp", m:"BD 50/55 W Classic Bp", c:"scrubber", s:"scrubber-walk", p:"咨询报价", d:"自走手推式洗地吸干机，55L水箱，51cm工作宽度，效率2800m²/h。" },
+  { n:"BD 50/70 R Classic", m:"BD 50/70 R Classic", c:"scrubber", s:"scrubber-walk", p:"咨询报价", d:"驾驶式电池驱动洗地机，每小时清洁面积高达2000m²。" },
+  // 洗地机-驾驶式
+  { n:"B 200 R 洗地机", m:"B 200 R", c:"scrubber", s:"scrubber-ride", p:"咨询报价", d:"驾驶式洗地机，D 90盘刷，200L水箱，作业面积可达7000m²。" },
+  { n:"B 300 R I", m:"B 300 R I", c:"scrubber", s:"scrubber-ride", p:"咨询报价", d:"大型驾驶式洗地吸干机，适用于大面积工商业场所。" },
+  { n:"BD 90/160 R Classic Bp", m:"BD 90/160 R Classic Bp", c:"scrubber", s:"scrubber-ride", p:"咨询报价", d:"大型驾驶式洗地吸干机，出众性能与最优性价比。" },
+  { n:"B 90 R Classic Bp", m:"B 90 R Classic Bp", c:"scrubber", s:"scrubber-ride", p:"咨询报价", d:"电池驱动驾驶式洗地吸干机，紧凑多功能设计，工作宽度55~75cm。" },
+  // 高压-冷水
+  { n:"HD 10/25-4 S Plus", m:"HD 10/25-4 S Plus", c:"pressure-washer", s:"pw-cold", p:"¥18,999", d:"冷水高压清洗机，250bar压力，1000L/h流量，EASY!Force高压枪柄。" },
+  // 高压-热水中级
+  { n:"HDS 8/18-4 M", m:"HDS 8/18-4 M", c:"pressure-washer", s:"pw-hot-mid", p:"咨询报价", d:"中级热水高压清洗机，ECO模式自动节能运行。" },
+  { n:"HDS 9/18-4 M", m:"HDS 9/18-4 M", c:"pressure-washer", s:"pw-hot-mid", p:"咨询报价", d:"中级热水高压清洗机，坚固耐用，ECO节能模式。" },
+  { n:"HDS 10/20-4 M", m:"HDS 10/20-4 M", c:"pressure-washer", s:"pw-hot-mid", p:"咨询报价", d:"中级热水高压清洗机，新一代设计，ECO模式。" },
+  { n:"HDS 12/18-4 S", m:"HDS 12/18-4 S", c:"pressure-washer", s:"pw-hot-super", p:"咨询报价", d:"超级热水高压清洗机，结实耐用，操作简单，ECO模式。" },
+  { n:"HDS 13/20-4 S", m:"HDS 13/20-4 S", c:"pressure-washer", s:"pw-hot-super", p:"咨询报价", d:"超级热水高压清洗机，强力清洁，坚固耐用，ECO模式。" },
+  // 吸尘器-Standard
+  { n:"NT 20/1 Me Classic", m:"NT 20/1 Me Classic", c:"vacuum", s:"vacuum-standard", p:"咨询报价", d:"紧凑干湿两用吸尘器，20L尘桶，可靠移除各类污垢。" },
+  { n:"NT 30/1 Me Classic", m:"NT 30/1 Me Classic", c:"vacuum", s:"vacuum-standard", p:"咨询报价", d:"干湿两用吸尘器，1500W涡轮机，30L尘桶。" },
+  { n:"NT 38/1 Me Classic", m:"NT 38/1 Me Classic", c:"vacuum", s:"vacuum-standard", p:"咨询报价", d:"紧凑坚固干湿两用吸尘器，38L尘桶。" },
+  { n:"NT 50/1 Tact Te", m:"NT 50/1 Tact Te", c:"vacuum", s:"vacuum-standard", p:"¥3,999", d:"专业干湿两用吸尘器，50L尘箱，可调节推杆，排水软管。" },
+  { n:"NT 50/2", m:"NT 50/2", c:"vacuum", s:"vacuum-standard", p:"咨询报价", d:"双电机干湿两用吸尘器，50L尘箱，出色吸力与处理能力。" },
+  { n:"NT 70/2 Me Classic", m:"NT 70/2 Me Classic", c:"vacuum", s:"vacuum-standard", p:"咨询报价", d:"双电机干湿两用吸尘器，70L尘箱。" },
+  { n:"NT 90/2 Me Classic", m:"NT 90/2 Me Classic", c:"vacuum", s:"vacuum-standard", p:"咨询报价", d:"通用型90L尘箱双电机吸尘器。" },
+  // 吸尘器-AP
+  { n:"NT 30/1 Ap L", m:"NT 30/1 Ap L", c:"vacuum", s:"vacuum-ap", p:"咨询报价", d:"高品质紧凑型中级干湿两用吸尘器，吸力强劲。" },
+  { n:"NT 75/2 Ap Me Tc", m:"NT 75/2 Ap Me Tc", c:"vacuum", s:"vacuum-ap", p:"咨询报价", d:"高性能强吸力干湿两用吸尘器，适用建筑/食品/汽车等工业环境。" },
+  // 扫地机
+  { n:"KM 130/300 R D", m:"KM 130/300 R D", c:"sweeper", s:"sweeper-ride", p:"咨询报价", d:"柴油驱动工业级扫地车，全液压配置，适合建筑工地/金属制造等恶劣工况。" },
+  { n:"KM 150/500 R D", m:"KM 150/500 R D", c:"sweeper", s:"sweeper-ride", p:"咨询报价", d:"柴油驱动工业级扫地车，1500mm清扫宽度，效率18000m²/h。" },
+  // 蒸汽/干冰
+  { n:"SG 4/4", m:"SG 4/4", c:"steam", s:"steam-cleaner", p:"¥6,999", d:"紧凑型蒸汽清洁机，4巴蒸汽压力，VapoHydro功能，无需化学剂。" },
+  { n:"IB 7/40 Classic", m:"IB 7/40 Classic", c:"steam", s:"dry-ice", p:"咨询报价", d:"小型化干冰清洗机，气流优化，适合狭窄空间使用。" },
+  { n:"IB 15/120", m:"IB 15/120", c:"steam", s:"dry-ice", p:"咨询报价", d:"强有力的干冰清洗设备，高耐用性，清洁效果出众。" }
+];
+
+// ===== 渲染函数 =====
+var subMap = {};
+categories.forEach(function(cat) { (cat.subs||[]).forEach(function(sub) { subMap[sub.id]={catId:cat.id,catName:cat.name,name:sub.name,count:sub.count||0}; }); });
+
+function renderSidebar() {
   var h = "";
-  for (var i = 0; i < categories.length; i++) {
-    var c = categories[i];
-    var extraClass = c.coming ? 'coming-soon' : '';
-    var imgHtml = c.image
-      ? '<img src="' + c.image + '" alt="' + c.name + '" loading="lazy">'
-      : '<div class="cat-placeholder">&#128161;</div>';
-
-    var samplesHtml = "";
-    if (c.samples && c.samples.length > 0) {
-      samplesHtml = '<div class="sample-list">';
-      for (var j = 0; j < c.samples.length; j++) {
-        var s = c.samples[j];
-        if (s.price) {
-          samplesHtml += '<div class="sample-item"><span class="sample-name">' + s.name + '</span><span class="sample-price">' + s.price + '</span></div>';
-        } else {
-          samplesHtml += '<div class="sample-item"><span class="sample-name">' + s.name + '</span></div>';
-        }
-      }
-      samplesHtml += '<div class="price-hint">* 更多优惠请联系客服</div>';
-      samplesHtml += '</div>';
+  categories.forEach(function(cat, ci) {
+    var arrow = cat.subs&&cat.subs.length ? '<span class="arrow" id="a'+ci+'">▶</span>' : '';
+    h += '<li><div class="cat-parent" data-c="'+cat.id+'" onclick="togC('+ci+',\''+cat.id+'\')"><span>'+cat.icon+' '+cat.name+'</span>'+arrow+'</div>';
+    if (cat.subs&&cat.subs.length) {
+      h += '<ul class="sub-list" id="s'+ci+'">';
+      cat.subs.forEach(function(sub) {
+        var b = sub.count>0?' <span class="badge">'+sub.count+'</span>':'';
+        h += '<li data-s="'+sub.id+'" onclick="selS(\''+sub.id+'\',this)">'+sub.name+b+'</li>';
+      });
+      h += '</ul>';
     }
-
-    var priceHtml = c.price && !c.coming
-      ? '<div class="cat-price">参考价：' + c.price + '<div class="price-hint">* 更多优惠请联系客服</div></div>'
-      : "";
-
-    var btnHtml = c.coming
-      ? '<span class="cat-btn disabled">即将上线</span>'
-      : '<a href="' + c.link + '" class="cat-btn">查看产品 &rarr;</a>';
-
-    var descHtml = c.coming
-      ? '<div class="cat-meta">即将上线，敬请期待</div>'
-      : '<div class="cat-desc">' + c.desc + '</div>';
-
-    h += '<div class="cat-card ' + extraClass + '">';
-    h += '<div class="cat-img-wrap">' + imgHtml + '</div>';
-    h += '<div class="cat-info">';
-    h += '<h3>' + c.name + '</h3>';
-    h += descHtml;
-    h += samplesHtml;
-    h += priceHtml;
-    h += btnHtml;
-    h += '</div></div>';
-  }
-  document.getElementById("catGrid").innerHTML = h;
+    h += '</li>';
+  });
+  document.getElementById("catNav").innerHTML = h;
 }
 
-renderCategories();
+function togC(idx, catId) {
+  var el = document.getElementById("s"+idx);
+  if (!el) { selC(catId); return; }
+  var o = el.classList.contains("open");
+  document.querySelectorAll(".sub-list").forEach(function(e){e.classList.remove("open");});
+  document.querySelectorAll(".arrow").forEach(function(e){e.classList.remove("open");});
+  if (!o) { el.classList.add("open"); var ar = document.getElementById("a"+idx); if(ar)ar.classList.add("open"); }
+  document.querySelectorAll(".cat-parent").forEach(function(e){e.classList.remove("active");});
+  var p = document.querySelector('.cat-parent[data-c="'+catId+'"]');
+  if(p)p.classList.add("active");
+}
+
+function selS(subId, el) {
+  document.querySelectorAll(".sub-list li").forEach(function(l){l.classList.remove("active");});
+  if(el)el.classList.add("active");
+  renderP(subId);
+}
+
+function selC(catId) {
+  document.querySelectorAll(".sub-list").forEach(function(e){e.classList.remove("open");});
+  document.querySelectorAll(".arrow").forEach(function(e){e.classList.remove("open");});
+  document.querySelectorAll(".cat-parent").forEach(function(e){e.classList.remove("active");});
+  document.querySelectorAll(".sub-list li").forEach(function(l){l.classList.remove("active");});
+  var p = document.querySelector('.cat-parent[data-c="'+catId+'"]');
+  if(p)p.classList.add("active");
+  categories.forEach(function(cat,ci){
+    if(cat.id===catId){
+      var el=document.getElementById("s"+ci);
+      if(el){el.classList.add("open");var ar=document.getElementById("a"+ci);if(ar)ar.classList.add("open");}
+    }
+  });
+  renderP(null, catId);
+}
+
+var curProds = [];
+function renderP(subId, catId) {
+  var f = [];
+  if (subId) {
+    f = allProducts.filter(function(p){return p.s===subId;});
+    var si = subMap[subId];
+    document.getElementById("currentCatTitle").textContent = si ? si.catName+" — "+si.name : "产品列表";
+    document.getElementById("currentCatDesc").textContent = si ? "浏览 "+si.catName+" 下「"+si.name+"」全部产品" : "";
+  } else if (catId) {
+    f = allProducts.filter(function(p){return p.c===catId;});
+    var ci = categories.find(function(c){return c.id===catId;});
+    document.getElementById("currentCatTitle").textContent = ci ? ci.name : "产品列表";
+    document.getElementById("currentCatDesc").textContent = ci ? ci.desc : "";
+  } else {
+    document.getElementById("currentCatTitle").textContent = "全部分类";
+    document.getElementById("currentCatDesc").textContent = "请从左侧选择产品分类查看对应产品";
+    document.getElementById("productGrid").innerHTML = '<div class="empty-state"><div class="icon">📦</div><p>请选择分类查看产品</p></div>';
+    document.getElementById("productCount").textContent = "共 0 个产品";
+    return;
+  }
+  document.getElementById("productCount").textContent = "共 "+f.length+" 个产品";
+  curProds = f;
+  renderG(f);
+}
+
+function renderG(prods) {
+  if (!prods||!prods.length) {
+    document.getElementById("productGrid").innerHTML = '<div class="empty-state"><div class="icon">📭</div><p>该分类暂无产品数据，敬请期待</p></div>';
+    return;
+  }
+  var h = "";
+  prods.forEach(function(p){
+    var pr = p.p && p.p!=="咨询报价" ? '<div class="product-price">'+p.p+'</div><div class="price-hint">* 更多优惠请联系客服</div>' : '<div class="product-price">'+p.p+'</div><div class="price-hint">* 更多优惠请联系客服</div>';
+    h += '<div class="product-card">';
+    h += '<div class="card-img"><span class="icon-placeholder">🧼</span></div>';
+    h += '<div class="card-body">';
+    h += '<h4>'+p.n+'</h4><div class="product-model">'+p.m+'</div>';
+    h += '<div class="product-desc">'+p.d+'</div>'+pr;
+    h += '<a href="https://wa.me/8618621559605?text=您好%20拜茨%2C%20我想咨询%3A%20'+encodeURIComponent(p.n)+'" target="_blank" class="card-btn" rel="noopener noreferrer">咨询报价</a>';
+    h += '</div></div>';
+  });
+  document.getElementById("productGrid").innerHTML = h;
+}
+
+function sortProducts(v) {
+  var s = [].concat(curProds);
+  switch(v){
+    case "name": s.sort(function(a,b){return a.n.localeCompare(b.n);}); break;
+    case "price-asc": s.sort(function(a,b){var pa=parseFloat((a.p||"0").replace(/[^0-9.]/g,""))||999999,pb=parseFloat((b.p||"0").replace(/[^0-9.]/g,""))||999999;return pa-pb;}); break;
+    case "price-desc": s.sort(function(a,b){var pa=parseFloat((a.p||"0").replace(/[^0-9.]/g,""))||-1,pb=parseFloat((b.p||"0").replace(/[^0-9.]/g,""))||-1;return pb-pa;}); break;
+    default: break;
+  }
+  renderG(s);
+}
 
 // Mobile nav
-document.getElementById("ham").onclick = function() {
-  document.getElementById("navR").classList.toggle("open");
-  this.classList.toggle("active");
+document.getElementById("ham").onclick=function(){
+  document.getElementById("navR").classList.toggle("open");this.classList.toggle("active");
 };
-var nls = document.querySelectorAll(".nav-right a");
-for (var i = 0; i < nls.length; i++) nls[i].onclick = function() {
-  document.getElementById("navR").classList.remove("open");
-  document.getElementById("ham").classList.remove("active");
-};
+document.querySelectorAll(".nav-right a").forEach(function(a){a.onclick=function(){
+  document.getElementById("navR").classList.remove("open");document.getElementById("ham").classList.remove("active");
+};});
+
+renderSidebar();
 </script>
 </body>
 </html>
