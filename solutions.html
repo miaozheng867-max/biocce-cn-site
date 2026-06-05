@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!-- 拜茨中文站 | www.biocce.cn | 行业方案 -->
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="description" content="拜茨清洁行业解决方案 — 工厂车间、商场超市、医院学校、酒店餐饮、仓储物流、汽车4S店、物业管理、公共场所等14大行业清洁方案。">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>行业方案 — 拜茨清洁</title>
+<link rel="canonical" href="https://www.biocce.cn/solutions.html">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--primary:#1A3A4A;--primary-light:#2C5F7A;--accent:#C9A84C;--accent-hover:#B8963E;--bg:#F5F6F8;--card:#fff;--text:#1A1A2E;--text-secondary:#5A6A7E;--text-light:#8E9EAF;--border:#E2E8F0;--shadow:0 2px 12px rgba(0,0,0,.06);--radius:12px;--radius-sm:8px}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.topbar{background:#0F1A2E;color:rgba(255,255,255,.65);font-size:12px;padding:5px 0}
+.topbar-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;padding:0 24px}
+.header{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
+.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:10px 24px}
+.logo{flex-shrink:0}
+.logo img{height:40px;width:auto;display:block}
+.search-bar{flex:1;display:flex;max-width:480px}
+.search-bar input{flex:1;padding:9px 14px;border:2px solid var(--primary);border-radius:var(--radius-sm) 0 0 var(--radius-sm);font-size:14px;outline:none}
+.search-bar button{padding:9px 18px;background:var(--primary);color:#fff;border:none;border-radius:0 var(--radius-sm) var(--radius-sm) 0;cursor:pointer;font-size:13px;font-weight:600}
+.header-actions{display:flex;gap:14px;align-items:center}
+.header-actions a{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10px;color:var(--text-secondary)}
+.header-actions a .icon{font-size:18px;line-height:1}
+.nav{background:var(--card);border-bottom:2px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;padding:0 24px}
+.nav-item{padding:10px 16px;font-size:13px;font-weight:500;color:var(--text-secondary);cursor:pointer;transition:.2s}
+.nav-item:hover{color:var(--primary)}
+.nav-item.active{color:var(--primary);font-weight:600;position:relative}
+.nav-item.active::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:2px;background:var(--accent)}
+.nav-hot{margin-left:auto;color:var(--accent);font-weight:600;font-size:13px;padding:10px 16px}
+.hero{background:linear-gradient(135deg,#0F1A2E 0%,var(--primary) 50%,var(--primary-light) 100%);padding:60px 24px;color:#fff}
+.hero-inner{max-width:1200px;margin:0 auto}
+.hero-text .tag{display:inline-block;background:rgba(255,255,255,.12);padding:4px 14px;border-radius:20px;font-size:11px;font-weight:500;margin-bottom:14px;letter-spacing:1px}
+.hero-text h1{font-size:clamp(26px,3.5vw,36px);font-weight:800;line-height:1.2;margin-bottom:10px}
+.hero-text p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:22px;max-width:520px}
+.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 26px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;cursor:pointer;transition:.2s}
+.btn-primary{background:var(--accent);color:#1A1A2E}
+.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
+.btn-outline{background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.section{padding:44px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-title{font-size:20px;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.feature-bar{background:#0F1A2E;color:rgba(255,255,255,.75);padding:18px 0;font-size:12px}
+.feature-bar-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 24px;text-align:center}
+.feature-bar-inner strong{color:#fff;display:block;font-size:14px;margin-bottom:3px}
+.footer{background:#0A1220;color:rgba(255,255,255,.6);padding:40px 24px 0}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;padding-bottom:28px}
+.footer h3{color:#fff;font-size:15px;font-weight:600;margin-bottom:10px}
+.footer h4{color:#fff;font-size:13px;font-weight:600;margin-bottom:8px}
+.footer p{font-size:12px;line-height:1.7}
+.footer ul{list-style:none}
+.footer ul li{margin-bottom:5px}
+.footer ul li a{font-size:12px;transition:.2s}
+.footer ul li a:hover{color:#fff}
+.footer .contact li{font-size:12px;margin-bottom:6px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:14px 24px;text-align:center;font-size:11px;color:rgba(255,255,255,.35)}
+@media(max-width:900px){
+.nav-inner{overflow-x:auto}
+.feature-bar-inner{grid-template-columns:repeat(2,1fr)}
+.footer-inner{grid-template-columns:1fr 1fr}
+.search-bar{max-width:280px}}
+@media(max-width:600px){
+.feature-bar-inner{grid-template-columns:1fr}
+.footer-inner{grid-template-columns:1fr}
+.search-bar{display:none}}
+.sol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sol-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:.2s}
+.sol-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.1)}
+.sol-card .sol-icon{font-size:42px;text-align:center;padding:24px 16px 8px;background:linear-gradient(180deg,var(--bg),var(--card))}
+.sol-card .sol-body{padding:0 18px 18px}
+.sol-card .sol-body h3{font-size:16px;font-weight:700;margin-bottom:6px}
+.sol-card .sol-body .sol-tag{display:inline-block;font-size:10px;color:var(--accent);font-weight:600;letter-spacing:.3px;margin-bottom:8px}
+.sol-card .sol-body .sol-desc{font-size:12px;color:var(--text-secondary);line-height:1.7;margin-bottom:10px}
+.sol-card .sol-body .sol-items{font-size:11px;color:var(--text-light);line-height:1.8;padding-left:14px;margin-bottom:10px}
+.sol-card .sol-body .sol-more{font-size:11px;color:var(--accent);font-weight:600}
+.sol-card .sol-body .sol-more:hover{text-decoration:underline}
+.sol-pages{display:flex;justify-content:center;gap:8px;margin-top:24px}
+.sol-pages .pg-btn{padding:8px 16px;border:1px solid var(--border);border-radius:var(--radius-sm);background:var(--card);color:var(--text-secondary);font-size:13px;cursor:pointer;transition:.2s;min-width:36px;text-align:center;box-shadow:none}
+.sol-pages .pg-btn:hover{border-color:var(--primary);color:var(--primary)}
+.sol-pages .pg-btn.on{background:var(--primary);border-color:var(--primary);color:#fff}
+.sol-pages .pg-btn:disabled{opacity:.4;cursor:default}
+@media(max-width:1050px){
+.sol-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+.sol-grid{grid-template-columns:1fr}
+}
+</style>
+</head><body>
+
+<div class="topbar"><div class="topbar-inner">
+  <span>欢迎来到拜茨清洁 — 清洁设备·用品·服务一站式采购平台</span>
+  <span><a href="#">登录</a> / <a href="#">注册</a> | <a href="#">询价单</a></span>
+</div></div>
+
+<div class="header"><div class="header-inner">
+  <a href="/" class="logo"><img src="images/logo.png" alt="拜茨清洁" width="40" height="40"></a>
+  <div class="search-bar">
+    <input type="text" placeholder="搜索行业方案、产品...">
+    <button>搜索</button>
+  </div>
+  <div class="header-actions">
+    <a href="#"><span class="icon">📋</span><span>询价单</span></a>
+    <a href="#"><span class="icon">🛒</span><span>购物车</span></a>
+    <a href="#"><span class="icon">👤</span><span>我的</span></a>
+  </div>
+</div></div>
+
+<div class="nav"><div class="nav-inner">
+  <a href="/" class="nav-item">首页</a>
+  <a href="products.html" class="nav-item">产品中心</a>
+  <a href="brands.html" class="nav-item">品牌馆</a>
+  <a href="services.html" class="nav-item">清洁服务</a>
+  <a href="solutions.html" class="nav-item active">行业方案</a>
+  <a href="about.html" class="nav-item">关于我们</a>
+  <a href="contact.html" class="nav-item">联系我们</a>
+  <span class="nav-hot">📞 +86 21 5107 8500</span>
+</div></div>
+
+<section class="hero"><div class="hero-inner">
+  <div class="hero-text">
+    <div class="tag">16大行业+清洁服务 · 专业清洁解决方案</div>
+    <h1>行业方案</h1>
+    <p>结合行业特点与清洁需求，为每个行业量身定制设备选型、清洁流程和配套服务方案。</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn btn-primary">获取免费方案 &rarr;</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="section"><div class="section-inner">
+  <div id="solContainer" class="sol-grid">
+
+    <div class="sol-card">
+      <div class="sol-icon">🏭</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 01</div>
+        <h3>工厂车间</h3>
+        <div class="sol-desc">针对制造型工厂车间的地面油污、工业粉尘、金属碎屑等复杂清洁需求，提供专业级设备选型方案。</div>
+        <div class="sol-items">• 驾驶式洗地机快速覆盖大面积<br>• 工业吸尘器处理金属屑/粉尘<br>• 高压清洗机清理设备油污<br>• 防爆吸尘器（易燃粉尘车间）</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏬</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 02</div>
+        <h3>商场超市</h3>
+        <div class="sol-desc">大型商业空间人流密集，要求清洁效率高、不影响正常营业。提供静音低噪、快速干燥的清洁方案。</div>
+        <div class="sol-items">• 手推式洗地机日常清洁<br>• 驾驶式洗地机夜间深度保洁<br>• 扫地机清理停车场<br>• 清洁服务团队驻场保洁</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏥</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 03</div>
+        <h3>医院学校</h3>
+        <div class="sol-desc">医疗机构和学校对卫生标准要求极高，需要抗菌、低噪、高效率的清洁设备及配套服务。</div>
+        <div class="sol-items">• 蒸汽清洗机高温消毒<br>• 静音吸尘器病房/教室使用<br>• 洗地机配合抗菌清洁剂<br>• 定期消毒保洁服务套餐</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏨</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 04</div>
+        <h3>酒店餐饮</h3>
+        <div class="sol-desc">酒店和餐饮场所清洁工作量大、频次高，对地毯保养、厨房除油、公共区域维护有特殊要求。</div>
+        <div class="sol-items">• 地毯清洗机定期深层护理<br>• 高压热水清洗机厨房除油<br>• 吸尘器客房快速清洁<br>• 蒸汽清洗机餐饮具消毒</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">📦</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 05</div>
+        <h3>仓储物流</h3>
+        <div class="sol-desc">仓库和物流中心面积大、通道窄、车流量大，需要高效的洗扫一体方案，保障地面安全整洁。</div>
+        <div class="sol-items">• 驾驶式洗地机大面积快速清洁<br>• 驾驶式扫地机货物区除尘<br>• 手推式洗地机窄通道作业<br>• 工业吸尘器货架高位除尘</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🚗</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 06</div>
+        <h3>汽车4S店</h3>
+        <div class="sol-desc">4S店展厅、维修车间和洗车区对清洁品质和形象展示要求高，需要定制化清洁设备组合。</div>
+        <div class="sol-items">• 高压清洗机洗车区配套<br>• 吸尘器展厅/车间除尘<br>• 洗地机展厅地面抛光<br>• 蒸汽清洗机发动机舱清洁</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏠</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 07</div>
+        <h3>物业管理</h3>
+        <div class="sol-desc">物业公司管理多个项目点，需要统一的清洁设备和管理方案，降低采购和维护成本。</div>
+        <div class="sol-items">• 多品牌设备选型（按项目定制）<br>• 设备租赁/以租代购方案<br>• 定期巡检+保洁服务套餐<br>• 清洁剂/配件集中采购供应</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏟️</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 08</div>
+        <h3>公共场所</h3>
+        <div class="sol-desc">机场、车站、体育场馆等大型公共场所人流量巨大，对清洁设备的续航、效率和可靠性要求极高。</div>
+        <div class="sol-items">• 大容量驾驶式洗地机<br>• 驾驶式扫地机户外广场<br>• 高压清洗机台阶/地面<br>• 清洁服务团队轮班保洁</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏗️</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 09</div>
+        <h3>建筑工地</h3>
+        <div class="sol-desc">建筑工地环境恶劣，泥浆、水泥、粉尘多，需要耐用型设备进行阶段性清洁和交付前的精细化保洁。</div>
+        <div class="sol-items">• 工业吸尘器清除施工粉尘<br>• 高压清洗机冲洗施工车辆<br>• 洗地机交付前地面精洁<br>• 防爆吸尘器（粉尘环境）</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🚜</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 10</div>
+        <h3>农业/畜牧业</h3>
+        <div class="sol-desc">养殖场、种植基地、食品加工场所对消毒和冲洗要求严格，需要大流量高压清洗设备和消毒配套。</div>
+        <div class="sol-items">• 高压热水清洗机养殖场冲洗<br>• 高温蒸汽清洗机消毒灭菌<br>• 工业吸尘器饲料粉尘清理<br>• 地面高压清洗+排水系统</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🚆</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 11</div>
+        <h3>交通运输</h3>
+        <div class="sol-desc">车站、机场、地铁、公交枢纽等人流密集场所，24小时不间断运营，对清洁时效和静音要求极高。</div>
+        <div class="sol-items">• 大容量驾驶式洗地机连续作业<br>• 静音吸尘器夜间候车厅保洁<br>• 驾驶式扫地机广场/站台<br>• 清洁服务团队轮班制</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🥩</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 12</div>
+        <h3>食品加工</h3>
+        <div class="sol-desc">食品厂、中央厨房、屠宰加工场所对食品安全级清洁有硬性要求，需耐高温、耐腐蚀的清洗系统。</div>
+        <div class="sol-items">• 高压热水清洗机油脂清洁<br>• 蒸汽清洗机设备消毒<br>• 泡沫清洗系统配合消毒剂<br>• 不锈钢材质耐腐蚀设备</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">💪</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 13</div>
+        <h3>健身/娱乐场所</h3>
+        <div class="sol-desc">健身房、游泳馆、KTV、影院等场所地毯汗渍、器材消毒、地面清洁需求频次高，需快速低噪设备。</div>
+        <div class="sol-items">• 地毯清洗机定期深层保养<br>• 洗地机健身区/过道清洁<br>• 蒸汽清洗机器材高温消毒<br>• 静音吸尘器日常除尘</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏢</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 14</div>
+        <h3>写字楼/办公楼</h3>
+        <div class="sol-desc">写字楼办公环境清洁频率高，对低噪音、不影响办公、地面养护有较高要求，需高颜值低噪音设备。</div>
+        <div class="sol-items">• 静音手推式洗地机白天作业<br>• 驾驶式洗地机夜间深度清洁<br>• 吸尘器办公区地毯/地面<br>• 定期地面抛光打蜡保养</div>
+        <a href="contact.html" class="sol-more">查看方案 &rarr;</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏠</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 15</div>
+        <h3>家庭清洁服务</h3>
+        <div class="sol-desc">面向个人家庭客户，提供日常保洁、深度清洁、开荒保洁及专项清洁服务。按小时或面积灵活计价。</div>
+        <div class="sol-items">• 日常保洁 — 按小时，2小时起<br>• 深度保洁 — 按面积，全屋无死角<br>• 开荒保洁 — 新房装修后首次清洁<br>• 专项清洁 — 地毯/空调/油烟机等</div>
+        <a href="services.html" class="sol-more">了解服务 →</a>
+      </div>
+    </div>
+
+    <div class="sol-card">
+      <div class="sol-icon">🏢</div>
+      <div class="sol-body">
+        <div class="sol-tag">INDUSTRY 16</div>
+        <h3>商业清洁服务</h3>
+        <div class="sol-desc">面向企业客户，提供办公室、商场、工厂、酒店等场所的定期保洁及深度清洁服务，可按合同签约。</div>
+        <div class="sol-items">• 办公室日常保洁 — 按面积包月<br>• 商场门店深度清洁 — 非营业时间<br>• 工厂车间地面清洁 — 油污粉尘处理<br>• 设备+清洁剂+人员全托管</div>
+        <a href="services.html" class="sol-more">获取方案 →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sol-pages" id="solPages"></div>
+
+</div></section>
+
+<div class="feature-bar"><div class="feature-bar-inner">
+  <div><strong>🔒 正品保障</strong>5大品牌原厂授权</div>
+  <div><strong>🚚 全国配送</strong>物流直达全国</div>
+  <div><strong>🔧 售后无忧</strong>专业团队上门</div>
+  <div><strong>💰 价格透明</strong>批量采购更优</div>
+</div></div>
+
+<footer class="footer"><div class="footer-inner">
+  <div>
+    <h3>拜茨供应链（上海）有限公司</h3>
+    <p style="margin-top:8px">清洁设备·用品·服务一站式采购平台。汇聚BIOCCE、卡赫、力奇、高美、坦能等品牌，为工厂、物业、酒店、医院等提供全品类清洁产品及专业清洁服务。</p>
+    <p style="margin-top:10px;font-size:12px"><strong>📍</strong> 上海 · 中国</p>
+  </div>
+  <div>
+    <h4>快速链接</h4>
+    <ul><li><a href="/">首页</a></li><li><a href="products.html">产品中心</a></li><li><a href="brands.html">品牌馆</a></li><li><a href="services.html">清洁服务</a></li><li><a href="about.html">关于我们</a></li></ul>
+  </div>
+  <div>
+    <h4>产品分类</h4>
+    <ul><li><a href="products.html">洗地机</a></li><li><a href="products.html">吸尘器</a></li><li><a href="products.html">高压清洗机</a></li><li><a href="products.html">清洁剂/配件</a></li><li><a href="products.html">扫地机</a></li></ul>
+  </div>
+  <div>
+    <h4>联系方式</h4>
+    <ul class="contact">
+      <li>📧 <a href="mailto:michael@biocce.com">michael@biocce.com</a></li>
+      <li>📞 +86 21 5107 8500</li>
+      <li>📍 上海市</li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">© 2026 拜茨供应链（上海）有限公司 版权所有</div>
+</footer>
+
+<script>
+var PER_PAGE = 8;
+var cards = document.querySelectorAll('#solContainer .sol-card');
+var totalPages = Math.ceil(cards.length / PER_PAGE);
+var pageEl = document.getElementById('solPages');
+
+function showSolPage(p){
+  p = Math.max(1, Math.min(p, totalPages));
+  cards.forEach(function(c, i){c.style.display = (i >= (p-1)*PER_PAGE && i < p*PER_PAGE) ? '' : 'none'});
+  var btns = document.querySelectorAll('.sol-pages .pg-btn.num');
+  btns.forEach(function(b){b.classList.remove('on')});
+  btns[p-1] && btns[p-1].classList.add('on');
+  var prevBtn = document.querySelector('.sol-pages .pg-btn.prev');
+  var nextBtn = document.querySelector('.sol-pages .pg-btn.next');
+  prevBtn && (prevBtn.disabled = (p === 1));
+  nextBtn && (nextBtn.disabled = (p === totalPages));
+}
+
+if(totalPages > 1){
+  var htmlPage = '<button class="pg-btn prev" onclick="showSolPage(' + 1 + '-1)" disabled>‹</button>';
+  for(var i=1; i<=totalPages; i++){
+    htmlPage += '<button class="pg-btn num' + (i===1?' on':'') + '" onclick="showSolPage(' + i + ')">' + i + '</button>';
+  }
+  htmlPage += '<button class="pg-btn next" onclick="showSolPage(' + 1 + '+1)" disabled>›</button>';
+  pageEl.innerHTML = htmlPage;
+}
+showSolPage(1);
+</script>
+
+</body></html>
