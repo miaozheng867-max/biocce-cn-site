@@ -1,5 +1,7 @@
 [tool.wrangler]
 name = "biocce-cn-site"
 pages_build_output_dir = "."
-
 compatibility_date = "2026-06-03"
+
+# 生产分支：master
+# 部署命令：source /c/Users/Michael/.cloudflare_creds && wrangler pages deploy . --branch=master
