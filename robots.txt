@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.biocce.com/sitemap.xml
+Sitemap: https://www.biocce.cn/sitemap.xml
 
 # Disallow admin or private areas
 Disallow: /cdn-cgi/

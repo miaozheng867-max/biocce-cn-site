@@ -1,411 +1,474 @@
-<!-- v2 -->
 <!DOCTYPE html>
-<!-- 拜茨中文站 | www.biocce.cn | 定稿文件 -->
-<html lang="zh-CN"><head>
+<html lang="zh-CN">
+<head>
 <meta charset="UTF-8">
-<meta name="description" content="拜茨清洁 — 清洁设备·用品·服务一站式采购平台。汇聚BIOCCE、卡赫、力奇、高美、坦能等品牌，提供洗地机、吸尘器、高压清洗机等全品类清洁设备及专业清洁服务。">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>拜茨清洁 — 清洁设备·用品·服务一站式采购平台</title>
-<link rel="canonical" href="https://www.biocce.cn/index.html">
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="拜茨清洁" />
+<meta property="og:title" content="拜茨清洁 — 清洁设备 · 用品 · 服务" />
+<meta property="og:description" content="清洁设备·用品·服务一站式采购平台。BIOCCE 自营及卡赫、力奇、高美、坦能授权合作，为工厂、商业、公共设施提供全品类清洁设备与专业服务。" />
+<meta property="og:url" content="https://www.biocce.cn/" />
+<meta property="og:image" content="https://www.biocce.cn/images/logo.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="拜茨清洁 — 清洁设备 · 用品 · 服务" />
+<meta name="twitter:description" content="清洁设备·用品·服务一站式采购平台。BIOCCE 自营及卡赫、力奇、高美、坦能授权合作，为工厂、商业、公共设施提供全品类清洁设备与专业服务。" />
+<meta name="twitter:image" content="https://www.biocce.cn/images/logo.png" />
+<meta name="google-site-verification" content="INSERT_GOOGLE_VERIFICATION_CODE" />
+<meta name="baidu-site-verification" content="INSERT_BAIDU_VERIFICATION_CODE" />
+<meta name="msvalidate.01" content="INSERT_BING_VERIFICATION_CODE" />
+<meta name="sogou_site_verification" content="INSERT_SOGOU_VERIFICATION_CODE" />
+<meta name="360-site-verification" content="INSERT_360_VERIFICATION_CODE" />
+<meta name="description" content="拜茨清洁 — 清洁设备·用品·服务一站式采购平台。BIOCCE 自营及卡赫、力奇、高美、坦能授权合作。">
+<title>拜茨清洁 — 清洁设备 · 用品 · 服务</title>
+<link rel="canonical" href="https://www.biocce.cn/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/design-system.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--primary:#1A3A4A;--primary-light:#2C5F7A;--accent:#C9A84C;--accent-hover:#B8963E;--bg:#F5F6F8;--card:#fff;--text:#1A1A2E;--text-secondary:#5A6A7E;--text-light:#8E9EAF;--border:#E2E8F0;--shadow:0 2px 12px rgba(0,0,0,.06);--radius:12px;--radius-sm:8px}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:inherit;text-decoration:none}
-img{max-width:100%}
-.topbar{background:#0F1A2E;color:rgba(255,255,255,.65);font-size:12px;padding:5px 0}
-.topbar-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;padding:0 24px}
-.header{background:var(--card);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-.header-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:10px 24px}
-.logo{flex-shrink:0}
-.logo img{height:40px;width:auto;display:block}
-.search-bar{flex:1;display:flex;max-width:480px}
-.search-bar input{flex:1;padding:9px 14px;border:2px solid var(--primary);border-radius:var(--radius-sm) 0 0 var(--radius-sm);font-size:14px;outline:none}
-.search-bar button{padding:9px 18px;background:var(--primary);color:#fff;border:none;border-radius:0 var(--radius-sm) var(--radius-sm) 0;cursor:pointer;font-size:13px;font-weight:600}
-.header-actions{display:flex;gap:14px;align-items:center}
-.header-actions a{display:flex;flex-direction:column;align-items:center;gap:1px;font-size:10px;color:var(--text-secondary)}
-.header-actions a .icon{font-size:18px;line-height:1}
-.nav{background:var(--card);border-bottom:2px solid var(--border)}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;padding:0 24px}
-.nav-item{padding:10px 16px;font-size:13px;font-weight:500;color:var(--text-secondary);cursor:pointer;transition:.2s}
-.nav-item:hover{color:var(--primary)}
-.nav-item.active{color:var(--primary);font-weight:600;position:relative}
-.nav-item.active::after{content:'';position:absolute;bottom:0;left:16px;right:16px;height:2px;background:var(--accent)}
-.nav-hot{margin-left:auto;color:var(--accent);font-weight:600;font-size:13px;padding:10px 16px}
-.hero{background:linear-gradient(135deg,#0F1A2E 0%,var(--primary) 50%,var(--primary-light) 100%);padding:60px 24px;color:#fff}
-.hero-inner{max-width:1200px;margin:0 auto}
-.hero-text .tag{display:inline-block;background:rgba(255,255,255,.12);padding:4px 14px;border-radius:20px;font-size:11px;font-weight:500;margin-bottom:14px;letter-spacing:1px}
-.hero-text h1{font-size:clamp(26px,3.5vw,36px);font-weight:800;line-height:1.2;margin-bottom:10px}
-.hero-text p{font-size:14px;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:22px;max-width:520px}
-.hero-btns{display:flex;gap:10px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:11px 26px;border-radius:var(--radius-sm);font-size:14px;font-weight:600;cursor:pointer;transition:.2s}
-.btn-primary{background:var(--accent);color:#1A1A2E}
-.btn-primary:hover{background:var(--accent-hover);transform:translateY(-1px)}
-.btn-outline{background:transparent;border:2px solid rgba(255,255,255,.4);color:#fff}
-.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.section{padding:44px 24px}
-.section-inner{max-width:1200px;margin:0 auto}
-.section-title{font-size:20px;font-weight:700;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
-.feature-bar{background:#0F1A2E;color:rgba(255,255,255,.75);padding:18px 0;font-size:12px}
-.feature-bar-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:0 24px;text-align:center}
-.feature-bar-inner strong{color:#fff;display:block;font-size:14px;margin-bottom:3px}
-.footer{background:#0A1220;color:rgba(255,255,255,.6);padding:40px 24px 0}
-.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;padding-bottom:28px}
-.footer h3{color:#fff;font-size:15px;font-weight:600;margin-bottom:10px}
-.footer h4{color:#fff;font-size:13px;font-weight:600;margin-bottom:8px}
-.footer p{font-size:12px;line-height:1.7}
-.footer ul{list-style:none}
-.footer ul li{margin-bottom:5px}
-.footer ul li a{font-size:12px;transition:.2s}
-.footer ul li a:hover{color:#fff}
-.footer .contact li{font-size:12px;margin-bottom:6px}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:14px 24px;text-align:center;font-size:11px;color:rgba(255,255,255,.35)}
-@media(max-width:900px){
-.nav-inner{overflow-x:auto}
-.feature-bar-inner{grid-template-columns:repeat(2,1fr)}
-.footer-inner{grid-template-columns:1fr 1fr}
-.search-bar{max-width:280px}}
-@media(max-width:600px){
-.feature-bar-inner{grid-template-columns:1fr}
-.footer-inner{grid-template-columns:1fr}
-.search-bar{display:none}}
-.section-title h2{font-size:20px;font-weight:700}
-.section-title a{font-size:13px;color:var(--primary);font-weight:500}
-.cat-wrapper{display:flex;flex-direction:column;gap:10px}
-.cat-row{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.cat-card{background:var(--card);border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:var(--shadow);cursor:pointer;transition:.2s;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.cat-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.1)}
-.cat-card .cicon{font-size:26px;margin-bottom:6px}
-.cat-card .cname{font-size:14px;font-weight:600;margin-bottom:2px}
-.cat-card .cdesc{font-size:11px;color:var(--text-light)}
-.cat-card.eq{border-top:3px solid var(--primary)}
-.cat-card.con{border-top:3px solid var(--accent)}
-.cat-card.tool{border-top:3px solid #8B5CF6}
-.cat-card.service{border-top:3px solid #10B981}
-.brand-showcase{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-.brand-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px 16px;text-align:center;cursor:pointer;transition:.2s}
-.brand-card:hover{border-color:var(--primary);box-shadow:var(--shadow);transform:translateY(-2px)}
-.brand-card .bname{font-size:18px;font-weight:700}
-.brand-card .bname.karcher{color:#E31E24}
-.brand-card .bname.biocce{color:var(--primary)}
-.brand-card .bname.nilfisk{color:#003D7A}
-.brand-card .bname.comac{color:#00843D}
-.brand-card .bname.tennant{color:#00529B}
-.brand-card .btag{font-size:11px;color:var(--text-light);margin-top:4px}
-.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.service-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:.2s}
-.service-card:hover{transform:translateY(-2px)}
-.service-card .sinfo{padding:20px}
-.service-card .si{font-size:24px;margin-bottom:4px}
-.service-card h3{font-size:15px;font-weight:600;margin-bottom:4px}
-.service-card p{font-size:12px;color:var(--text-secondary);line-height:1.6}
-.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.prod-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);cursor:pointer;transition:.2s}
-.prod-card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
-.prod-card .pimg{height:170px;background:#f0f3f7;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.prod-card .pimg img{width:100%;height:100%;object-fit:contain;padding:12px}
-.prod-card .pinfo{padding:12px 14px}
-.prod-card .pbrand{font-size:10px;color:var(--text-light);margin-bottom:3px}
-.prod-card .pname{font-size:13px;font-weight:600;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.4}
-.prod-card .pprice{font-size:15px;font-weight:700;color:var(--accent)}
-.prod-card .pprice small{font-size:11px;font-weight:400;color:var(--text-light)}
-.prod-card .pbtns{margin-top:8px;display:flex;gap:6px}
-.prod-card .pbtns span{display:inline-block;padding:5px 12px;border-radius:var(--radius-sm);font-size:11px;font-weight:500;text-align:center;flex:1}
-.prod-card .pbtns .inq{background:var(--primary);color:#fff}
-.prod-card .pbtns .buy{background:var(--accent);color:#1A1A2E}
-.sol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.sol-card{background:var(--card);border-radius:var(--radius);padding:20px 14px;text-align:center;box-shadow:var(--shadow);cursor:pointer;transition:.2s}
-.sol-card:hover{background:var(--primary);color:#fff;transform:translateY(-2px)}
-.sol-card .si{font-size:22px;margin-bottom:4px}
-.sol-card h3{font-size:13px;font-weight:600}
-@media(max-width:900px){
-.cat-row{grid-template-columns:repeat(2,1fr)}
-.prod-grid{grid-template-columns:repeat(2,1fr)}
-.service-grid{grid-template-columns:1fr}
-.brand-showcase{grid-template-columns:repeat(3,1fr)}
-.sol-grid{grid-template-columns:repeat(2,1fr)}
+/* ═══ 首页专属样式 — 设计定稿 v4 ═══ */
+
+/* ── Hero ── */
+.hero-home {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 45%, var(--primary-light) 100%);
+  padding: 120px 0 100px;
+  position: relative;
+  overflow: hidden;
 }
-@media(max-width:600px){
-.cat-row{grid-template-columns:repeat(2,1fr)}
-.prod-grid{grid-template-columns:1fr}
-.brand-showcase{grid-template-columns:repeat(2,1fr)}
-.sol-grid{grid-template-columns:1fr}
-.hero-text h1{font-size:22px}
+.hero-home::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 80% 20%, rgba(201,168,76,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 800px 500px at 20% 80%, rgba(255,255,255,0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+.hero-home::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.2), transparent);
+}
+.hero-home-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  position: relative;
+  z-index: 1;
+}
+.hero-home-text { flex: 1; }
+.hero-home-text .tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 24px;
+}
+.hero-home-text .tag::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--accent);
+}
+.hero-home-text h1 {
+  font-size: clamp(34px, 4.8vw, 54px);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+.hero-home-text h1 .hl { color: var(--accent); font-weight: 800; }
+.hero-home-text p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+  max-width: 480px;
+  margin-bottom: 32px;
+}
+.hero-home-text .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+/* ── Section 通用 ── */
+.section-home { padding: 100px 0; }
+.section-home-alt { background: var(--card); }
+.section-home-header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 56px;
+}
+.section-home-header .tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.section-home-header h2 {
+  font-size: clamp(26px, 2.8vw, 36px);
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+  color: var(--text);
+}
+.section-home-header p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ── Stats ── */
+.stats-home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.stat-home { text-align: center; }
+.stat-home .num { font-size: 44px; font-weight: 800; color: var(--primary); line-height: 1; margin-bottom: 8px; }
+.stat-home .num .s { color: var(--accent); }
+.stat-home .label { font-size: 13px; color: var(--text-light); letter-spacing: 0.5px; }
+.stat-home .bar { width: 24px; height: 2px; background: var(--accent); margin: 12px auto 0; }
+
+/* ── 业务板块 ── */
+.biz-home { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.biz-home-card {
+  padding: 44px 32px 40px;
+  border-radius: var(--radius);
+  transition: all 0.4s ease;
+  border: 1px solid var(--border);
+  background: var(--card);
+  position: relative;
+  overflow: hidden;
+}
+.biz-home-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.biz-home-card:hover { border-color: transparent; box-shadow: 0 8px 40px rgba(26,58,74,0.08); transform: translateY(-4px); }
+.biz-home-card:hover::before { opacity: 1; }
+.biz-home-card.eq::before { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+.biz-home-card.con::before { background: linear-gradient(90deg, var(--accent), var(--accent-hover)); }
+.biz-home-card.svc::before { background: linear-gradient(90deg, #10B981, #34D399); }
+.biz-home-card .bi { font-size: 34px; margin-bottom: 14px; display: block; }
+.biz-home-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 10px; }
+.biz-home-card .bi-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
+.biz-home-card .bi-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.biz-home-card .bi-tags span {
+  font-size: 11px; color: var(--text-light); background: var(--bg);
+  padding: 3px 12px; border-radius: 4px; border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+.biz-home-card:hover .bi-tags span { border-color: var(--accent); color: var(--text); }
+
+/* ── Brand Strip ── */
+.brand-strip { display: flex; justify-content: center; align-items: center; gap: 48px; flex-wrap: wrap; }
+.brand-strip .bname { font-size: 22px; font-weight: 700; letter-spacing: 1px; opacity: 0.4; transition: opacity 0.3s ease; }
+.brand-strip .bname:hover { opacity: 0.8; }
+.brand-strip .b-karcher { color: #E31E24; }
+.brand-strip .b-biocce { color: var(--primary); }
+.brand-strip .b-nilfisk { color: #003D7A; }
+.brand-strip .b-comac { color: #00843D; }
+.brand-strip .b-tennant { color: #00529B; }
+
+/* ── Product Showcase ── */
+.prod-home-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.prod-home-card { border-radius: var(--radius); overflow: hidden; transition: all 0.4s ease; border: 1px solid var(--border); background: var(--card); }
+.prod-home-card:hover { box-shadow: 0 12px 48px rgba(26,58,74,0.08); transform: translateY(-4px); border-color: transparent; }
+.prod-home-card .ph-img { height: 280px; background: var(--bg-alt); display: flex; align-items: center; justify-content: center; padding: 32px; }
+.prod-home-card .ph-img img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.6s ease; }
+.prod-home-card:hover .ph-img img { transform: scale(1.06); }
+.prod-home-card .ph-body { padding: 28px 28px 32px; }
+.prod-home-card .ph-body .ph-brand { font-size: 10px; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+.prod-home-card .ph-body .ph-name { font-size: 19px; font-weight: 600; margin-bottom: 8px; }
+.prod-home-card .ph-body .ph-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 14px; }
+.prod-home-card .ph-body .ph-price { font-size: 20px; font-weight: 700; color: var(--accent); }
+.prod-home-card .ph-body .ph-price small { font-size: 12px; font-weight: 400; color: var(--text-light); }
+.prod-home-card .ph-body .ph-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--primary); transition: all 0.3s ease; }
+.prod-home-card .ph-body .ph-link:hover { gap: 10px; color: var(--accent); }
+
+/* ── CTA ── */
+.cta-home { text-align: center; padding: 100px 24px; position: relative; overflow: hidden; }
+.cta-home::before { content: ''; position: absolute; top: -50%; left: -20%; right: -20%; bottom: -50%; background: radial-gradient(ellipse at center, rgba(201,168,76,0.04) 0%, transparent 60%); pointer-events: none; }
+.cta-home h2 { font-size: clamp(24px, 2.6vw, 34px); font-weight: 700; margin-bottom: 12px; }
+.cta-home p { font-size: 15px; color: var(--text-secondary); max-width: 420px; margin: 0 auto 28px; }
+
+@media (max-width: 1024px) {
+  .hero-home-text { max-width: 100%; }
+  .prod-home-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 900px) {
+  .section-home { padding: 64px 0; }
+  .hero-home { padding: 100px 0 60px; }
+  .stats-home { grid-template-columns: 1fr; gap: 32px; }
+  .biz-home { grid-template-columns: 1fr; }
+  .brand-strip { gap: 24px; }
+  .brand-strip .bname { font-size: 18px; }
 }
 </style>
-</head><body>
+</head>
+<body>
 
-<div class="topbar"><div class="topbar-inner">
-  <span>欢迎来到拜茨清洁 — 清洁设备·用品·服务一站式采购平台</span>
-  <span><a href="#">登录</a> / <a href="#">注册</a> | <a href="#">询价单</a></span>
-</div></div>
-
-<div class="header"><div class="header-inner">
-  <a href="/" class="logo"><img src="images/logo.png" alt="拜茨清洁" width="40" height="40"></a>
-  <div class="search-bar">
-    <input type="text" placeholder="搜索产品、品牌、型号...">
-    <button>搜索</button>
-  </div>
-  <div class="header-actions">
-    <a href="#"><span class="icon">📋</span><span>询价单</span></a>
-    <a href="#"><span class="icon">🛒</span><span>购物车</span></a>
-    <a href="#"><span class="icon">👤</span><span>我的</span></a>
-  </div>
-</div></div>
-
-<div class="nav"><div class="nav-inner">
-  <a href="/" class="nav-item active">首页</a>
-  <a href="products.html" class="nav-item">产品中心</a>
-  <a href="brands.html" class="nav-item">品牌馆</a>
-  <a href="services.html" class="nav-item">清洁服务</a>
-  <a href="solutions.html" class="nav-item">行业方案</a>
-  <a href="about.html" class="nav-item">关于我们</a>
-  <a href="contact.html" class="nav-item">联系我们</a>
-  <span class="nav-hot">📞 +86 21 5107 8500</span>
-</div></div>
-
-<section class="hero"><div class="hero-inner">
-  <div class="hero-text">
-    <div class="tag">5大国际品牌 · 正品保障 · 工厂直供</div>
-    <h1>清洁设备·用品·服务<br>一站式采购平台</h1>
-    <p>汇聚BIOCCE、卡赫、力奇、高美、坦能等国内外知名品牌，提供洗地机、高压清洗机、工业吸尘器、清洁剂及配件全品类产品。B2B批量采购 / B2C零售 / 设备租赁 / 上门清洁服务。</p>
-    <div class="hero-btns">
-      <a href="products.html" class="btn btn-primary">查看全部产品 →</a>
-      <a href="services.html" class="btn btn-outline">预约清洁服务</a>
-    </div>
-  </div>
-</div></section>
-
-<!-- 全部分类 -->
-<section class="section"><div class="section-inner">
-  <div class="section-title"><h2>全部分类</h2><a href="products.html">全部分类 &rarr;</a></div>
-  <div class="cat-wrapper">
-    <div class="cat-row">
-      <a href="products.html#洗地机" class="cat-card eq"><div class="cicon">🧹</div><div class="cname">洗地机</div><div class="cdesc">手推式 · 驾驶式 · 地毯清洗机</div></a>
-      <a href="products.html#吸尘器" class="cat-card eq"><div class="cicon">💨</div><div class="cname">吸尘器</div><div class="cdesc">工业 · 商用 · 干湿两用</div></a>
-      <a href="products.html#高压清洗机" class="cat-card eq"><div class="cicon">💧</div><div class="cname">高压清洗机</div><div class="cdesc">冷水 · 热水 · 商用</div></a>
-      <a href="products.html#扫地机" class="cat-card eq"><div class="cicon">🌀</div><div class="cname">扫地机</div><div class="cdesc">手推式 · 驾驶式</div></a>
-      <a href="products.html#蒸汽清洗机" class="cat-card eq"><div class="cicon">🌫️</div><div class="cname">蒸汽清洗机</div><div class="cdesc">酒店餐饮 · 厨房深度清洁</div></a>
-    </div>
-    <div class="cat-row">
-      <a href="products.html#工业擦拭纸" class="cat-card con"><div class="cicon">🧻</div><div class="cname">工业擦拭纸/无尘布</div><div class="cdesc">擦拭纸 · 无尘布 · 工业抹布</div></a>
-      <a href="products.html#清洁剂" class="cat-card con"><div class="cicon">🧴</div><div class="cname">清洁剂</div><div class="cdesc">地面 · 地毯 · 不锈钢 · 玻璃</div></a>
-      <a href="products.html#配件" class="cat-card con"><div class="cicon">🔧</div><div class="cname">配件 &amp; 刷盘胶条</div><div class="cdesc">刷盘 · 胶条 · 滤芯 · 喷嘴</div></a>
-      <a href="products.html#清洁工具" class="cat-card tool"><div class="cicon">🧤</div><div class="cname">清洁工具</div><div class="cdesc">拖把 · 水桶 · 刮水器 · 垃圾车</div></a>
-      <a href="services.html" class="cat-card service"><div class="cicon">🧽</div><div class="cname">清洁服务</div><div class="cdesc">上门清洁 · 保洁套餐</div></a>
-    </div></div>
-  </div>
-</div></section>
-
-<section class="section" style="background:var(--card)"><div class="section-inner">
-  <div class="section-title"><h2>合作品牌</h2><a href="brands.html">品牌馆 &rarr;</a></div>
-  <div class="brand-showcase">
-    <div class="brand-card"><div class="bname karcher">KÄRCHER</div><div class="btag">德国卡赫 · 清洁设备全球领导者</div></div>
-    <div class="brand-card"><div class="bname biocce">BIOCCE</div><div class="btag">拜茨自营 · 源头工厂直供</div></div>
-    <div class="brand-card"><div class="bname nilfisk">NILFISK</div><div class="btag">丹麦力奇 · 专业清洁方案</div></div>
-    <div class="brand-card"><div class="bname comac">COMAC</div><div class="btag">意大利高美 · 高效清洁设备</div></div>
-    <div class="brand-card"><div class="bname tennant">TENNANT</div><div class="btag">美国坦能 · 可持续清洁技术</div></div>
-  </div>
-</div></section>
-
-<section class="section"><div class="section-inner">
-  <div class="section-title"><h2>清洁服务</h2><a href="services.html">了解更多 &rarr;</a></div>
-  <div class="service-grid">
-    <div class="service-card"><div class="sinfo"><div class="si">🧽</div><h3>上门清洁服务</h3><p>专业团队上门，提供地毯清洗、地面打蜡、深度保洁、工厂车间清洁。按面积报价，快速响应。</p></div></div>
-    <div class="service-card"><div class="sinfo"><div class="si">📋</div><h3>定期保洁套餐</h3><p>企业周/月/季度保洁方案，设备+人员+清洁剂一站式托管，降低管理成本。</p></div></div>
-  </div>
-</div></section>
-
-<section class="section" style="background:var(--card)"><div class="section-inner">
-  <div class="section-title"><h2>热门产品</h2><a href="products.html">查看更多 &rarr;</a></div>
-  <div class="prod-grid">
-    <a href="product/bc1250.html" class="prod-card"><div class="pimg"><img src="images/product-bc1250.png" alt="BC1250" loading="lazy" width="300" height="300"></div><div class="pinfo"><div class="pbrand">BIOCCE 拜茨自营</div><div class="pname">驾驶式洗地机 BC1250</div><div class="pprice">¥40,599<small> 起</small></div><div class="pbtns"><span class="inq">详情</span><span class="buy">查看</span></div></div></a>
-    <a href="product/bc1000.html" class="prod-card"><div class="pimg"><img src="images/product-bc1000.png" alt="BC1000" loading="lazy" width="300" height="300"></div><div class="pinfo"><div class="pbrand">BIOCCE 拜茨自营</div><div class="pname">驾驶式洗地机 BC1000</div><div class="pprice">¥29,999<small> 起</small></div><div class="pbtns"><span class="inq">详情</span><span class="buy">查看</span></div></div></a>
-    <a href="product/bc600.html" class="prod-card"><div class="pimg"><img src="images/product-bc600.png" alt="BC600" loading="lazy" width="300" height="300"></div><div class="pinfo"><div class="pbrand">BIOCCE 拜茨自营</div><div class="pname">手推式洗地机 BC600</div><div class="pprice">¥14,699<small> 起</small></div><div class="pbtns"><span class="inq">详情</span><span class="buy">查看</span></div></div></a>
-    <a href="product/bc500.html" class="prod-card"><div class="pimg"><img src="images/product-bc500.png" alt="BC500" loading="lazy" width="300" height="300"></div><div class="pinfo"><div class="pbrand">BIOCCE 拜茨自营</div><div class="pname">手推式洗地机 BC500</div><div class="pprice">¥9,499<small> 起</small></div><div class="pbtns"><span class="inq">详情</span><span class="buy">查看</span></div></div></a>
-</div>
-</div></section>
-
-<section class="section"><div class="section-inner">
-  <div class="section-title"><h2>行业解决方案</h2><a href="solutions.html">全部 &rarr;</a></div>
-  <div class="sol-grid">
-    <div class="sol-card"><div class="si">🏭</div><h3>工厂车间</h3></div>
-    <div class="sol-card"><div class="si">🏬</div><h3>商场超市</h3></div>
-    <div class="sol-card"><div class="si">🏥</div><h3>医院学校</h3></div>
-    <div class="sol-card"><div class="si">🏨</div><h3>酒店餐饮</h3></div>
-    <div class="sol-card"><div class="si">📦</div><h3>仓储物流</h3></div>
-    <div class="sol-card"><div class="si">🚗</div><h3>汽车4S店</h3></div>
-    <div class="sol-card"><div class="si">🏠</div><h3>物业管理</h3></div>
-    <div class="sol-card"><div class="si">🏟️</div><h3>公共场所</h3></div>
-  </div>
-</div></section>
-
-<div class="feature-bar"><div class="feature-bar-inner">
-  <div><strong>🔒 正品保障</strong>5大品牌原厂授权</div>
-  <div><strong>🚚 全国配送</strong>物流直达全国</div>
-  <div><strong>🔧 售后无忧</strong>专业团队上门</div>
-  <div><strong>💰 价格透明</strong>批量采购更优</div>
-</div></div>
-
-<footer class="footer"><div class="footer-inner">
-  <div>
-    <h3>拜茨供应链（上海）有限公司</h3>
-    <p style="margin-top:8px">清洁设备·用品·服务一站式采购平台。汇聚BIOCCE、卡赫、力奇、高美、坦能等品牌，为工厂、物业、酒店、医院等提供全品类清洁产品及专业清洁服务。</p>
-    <p style="margin-top:10px;font-size:12px"><strong>📍</strong> 上海 · 中国</p>
-  </div>
-  <div>
-    <h4>快速链接</h4>
-    <ul><li><a href="/">首页</a></li><li><a href="products.html">产品中心</a></li><li><a href="brands.html">品牌馆</a></li><li><a href="services.html">清洁服务</a></li><li><a href="about.html">关于我们</a></li></ul>
-  </div>
-  <div>
-    <h4>产品分类</h4>
-    <ul><li><a href="products.html">洗地机</a></li><li><a href="products.html">吸尘器</a></li><li><a href="products.html">高压清洗机</a></li><li><a href="products.html">清洁剂/配件</a></li><li><a href="products.html">扫地机</a></li></ul>
-  </div>
-  <div>
-    <h4>联系方式</h4>
-    <ul class="contact">
-      <li>📧 <a href="mailto:michael@biocce.com">michael@biocce.com</a></li>
-      <li>📞 +86 21 5107 8500</li>
-      <li>📍 上海市</li>
-    </ul>
+<!-- ═══ 导航：完整复用 design-system.css ═══ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>欢迎来到拜茨清洁 — 清洁设备·用品·服务一站式采购平台</span>
+    <span class="topbar-links">
+      <a href="#">登录</a><span class="sep">/</span><a href="#">注册</a>
+      <span class="sep hide-mobile">|</span>
+      <a href="#" class="hide-mobile">询价单</a>
+    </span>
   </div>
 </div>
-<div class="footer-bottom">© 2026 拜茨供应链（上海）有限公司 版权所有</div>
+
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <img src="images/logo.png" alt="拜茨清洁" width="38" height="38">
+      <div>
+        <div class="logo-text">拜茨清洁</div>
+        <div class="logo-sub">BIOCCE CLEANING</div>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="/" class="active">首页</a>
+      <a href="products.html">产品中心</a>
+      <a href="brands.html">品牌馆</a>
+      <a href="services.html">清洁服务</a>
+      <a href="solutions.html">行业方案</a>
+      <a href="about.html">关于我们</a>
+      <a href="contact.html">联系我们</a>
+      <span class="nav-phone">📞 +86 21 5107 8500</span>
+    </nav>
+    <button class="menu-toggle" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ═══ 主体内容 — 设计方案C 定稿 ═══ -->
+
+<!-- Hero -->
+<section class="hero-home">
+  <div class="hero-home-inner">
+    <div class="hero-home-text">
+      <div class="tag">Five leading brands · Authorized partner</div>
+      <h1>清洁设备<br><span class="hl">一站到位</span></h1>
+      <p>BIOCCE 自营制造，汇聚卡赫、力奇、高美、坦能等国际品牌，为工厂、商业、公共设施提供全品类清洁设备与专业服务。</p>
+      <div class="btn-row">
+        <a href="products.html" class="btn btn-primary btn-lg">探索全部产品 →</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">联系我们</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 数据 -->
+<section class="section-home" style="padding:64px 0">
+  <div class="container">
+    <div class="stats-home">
+      <div class="stat-home">
+        <div class="num">5<span class="s">+</span></div>
+        <div class="label">国际品牌授权合作</div>
+        <div class="bar"></div>
+      </div>
+      <div class="stat-home">
+        <div class="num">500<span class="s">+</span></div>
+        <div class="label">企业客户信赖之选</div>
+        <div class="bar"></div>
+      </div>
+      <div class="stat-home">
+        <div class="num">14</div>
+        <div class="label">行业覆盖 · 全场景方案</div>
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 业务板块 -->
+<section class="section-home section-home-alt">
+  <div class="container">
+    <div class="section-home-header">
+      <div class="tag">Full Coverage</div>
+      <h2>全品类业务覆盖</h2>
+      <p>从设备到耗材到服务，十大产品线满足您的全面需求</p>
+    </div>
+    <div class="biz-home">
+      <div class="biz-home-card eq">
+        <span class="bi">🧹</span>
+        <h3>清洁设备</h3>
+        <div class="bi-desc">覆盖商业与工业全场景的清洁设备，BIOCCE 自营及国际品牌双线供应</div>
+        <div class="bi-tags">
+          <span>洗地机</span><span>吸尘器</span><span>高压清洗机</span><span>扫地机</span><span>蒸汽清洗机</span>
+        </div>
+      </div>
+      <div class="biz-home-card con">
+        <span class="bi">🔧</span>
+        <h3>配件 &amp; 耗材</h3>
+        <div class="bi-desc">常用消耗品与易损配件现货供应，批量采购享有更具竞争力的价格</div>
+        <div class="bi-tags">
+          <span>工业擦拭纸</span><span>清洁剂</span><span>刷盘胶条</span><span>滤芯喷嘴</span><span>清洁工具</span>
+        </div>
+      </div>
+      <div class="biz-home-card svc">
+        <span class="bi">🧽</span>
+        <h3>清洁服务</h3>
+        <div class="bi-desc">从上门清洁到设备租赁，为企业提供灵活专业的清洁解决方案</div>
+        <div class="bi-tags">
+          <span>上门深度清洁</span><span>定期保洁套餐</span><span>设备租赁</span><span>以租代购</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 品牌 -->
+<section class="section-home">
+  <div class="container">
+    <div class="section-home-header">
+      <div class="tag">Our Brands</div>
+      <h2>合作品牌</h2>
+      <p>原厂授权 · 正品保障 · 全国服务网络</p>
+    </div>
+    <div class="brand-strip">
+      <span class="bname b-karcher">KÄRCHER</span>
+      <span class="bname b-biocce">BIOCCE</span>
+      <span class="bname b-nilfisk">NILFISK</span>
+      <span class="bname b-comac">COMAC</span>
+      <span class="bname b-tennant">TENNANT</span>
+    </div>
+  </div>
+</section>
+
+<!-- 精选产品 -->
+<section class="section-home section-home-alt">
+  <div class="container">
+    <div class="section-home-header">
+      <div class="tag">Featured Products</div>
+      <h2>精选机型</h2>
+      <p>源自拜茨自有工厂，品质可控，性价比出众</p>
+    </div>
+    <div class="prod-home-grid">
+      <div class="prod-home-card">
+        <div class="ph-img"><img src="images/product-bc1250.png" alt="BC1250" loading="lazy" width="400" height="280"></div>
+        <div class="ph-body">
+          <div class="ph-brand">BIOCCE · 旗舰机型</div>
+          <div class="ph-name">驾驶式洗地机 BC1250</div>
+          <div class="ph-desc">1250mm 清洗宽度 · 140L/150L 水箱 · 适合超大型工厂及物流枢纽</div>
+          <div class="ph-price">¥40,599<small> 起</small></div>
+          <a href="product/bc1250.html" class="ph-link">查看详情 →</a>
+        </div>
+      </div>
+      <div class="prod-home-card">
+        <div class="ph-img"><img src="images/product-bc600.png" alt="BC600" loading="lazy" width="400" height="280"></div>
+        <div class="ph-body">
+          <div class="ph-brand">BIOCCE · 经典型号</div>
+          <div class="ph-name">手推式洗地机 BC600</div>
+          <div class="ph-desc">600mm 清洗宽度 · 灵活轻便 · 适合商场、超市、医院日常清洁</div>
+          <div class="ph-price">¥14,699<small> 起</small></div>
+          <a href="product/bc600.html" class="ph-link">查看详情 →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-home cta-home">
+  <div class="container">
+    <h2>需要专业的清洁方案？</h2>
+    <p>从设备选型到服务落地，拜茨团队为您量身定制</p>
+    <a href="contact.html" class="btn btn-primary btn-lg" style="font-size:15px;padding:16px 40px">免费获取方案 →</a>
+  </div>
+</section>
+
+<!-- ═══ Feature Bar + Footer：完整复用 ═══ -->
+<div class="feature-bar">
+  <div class="feature-bar-inner">
+    <div><strong>🔒 正品保障</strong><span>5大品牌原厂授权</span></div>
+    <div><strong>🚚 全国配送</strong><span>物流直达全国</span></div>
+    <div><strong>🔧 售后无忧</strong><span>专业团队上门</span></div>
+    <div><strong>💰 价格透明</strong><span>批量采购更优</span></div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>
+      <h3>拜茨供应链（上海）有限公司</h3>
+      <p>清洁设备·用品·服务一站式采购平台。汇聚BIOCCE、卡赫、力奇、高美、坦能等品牌，为工厂、物业、酒店、医院等提供全品类清洁产品及专业清洁服务。</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61590473731923" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.linkedin.com/company/biocce" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="https://www.youtube.com/@baici" target="_blank" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.instagram.com/biocce_cleaning" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://weibo.com/u/1234567890" target="_blank" aria-label="微博" title="微博"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M10.098 20.323c-3.977.391-7.414-1.406-7.672-4.02-.259-2.609 2.759-5.047 6.74-5.441 3.979-.394 7.413 1.404 7.671 4.018.259 2.6-2.759 5.049-6.739 5.443zM6.737 14.132c.199.42.86.726 1.475.684.613-.043.955-.406.762-.82-.195-.419-.86-.727-1.476-.686-.614.043-.951.406-.761.822zm2.457 1.379c-.372.574.054 1.267.95 1.55.894.28 1.914.06 2.286-.512.369-.569-.059-1.266-.951-1.547-.892-.279-1.917-.061-2.285.509zm4.38-8.685c-.01.144.088.252.238.277.256.041.424-.035.519-.107.153-.12.088-.247.035-.316-.077-.1-.207-.162-.357-.203-.212-.058-.444-.002-.435.349zm-2.028-1.481c-4.617-.468-8.663 2.131-9.05 5.802-.092.875.099 1.719.503 2.435.2.358.503.63.857.839a8.76 8.76 0 01-.274-.237c-1.557-1.422-1.892-3.688-.726-5.058 1.166-1.37 3.449-1.679 5.373-1.075.747.234 1.416.613 1.95 1.101.434.392.711.82.865 1.26.155.44.175.869.064 1.25.229-.186.483-.34.748-.464.136-.064.25-.142.351-.231.253.154.512.298.779.434.223.291.376.624.452.982.08-.82-.058-1.677-.46-2.481a6.647 6.647 0 00-1.532-2.076 7.006 7.006 0 00-2.296-1.358 8.068 8.068 0 00-1.654-.423zm5.914 1.433c.155.058.307.126.452.204.277-.591.542-1.017.53-1.458-.011-.367-.217-.601-.491-.753a4.08 4.08 0 00-.918-.368c-.181-.045-.36-.065-.533-.078.178.553.262 1.15.223 1.764a7.689 7.689 0 01-.184 1.346c.307-.265.607-.473.921-.657z"/></svg></a>
+        <a href="https://www.tiktok.com/@biocce" target="_blank" aria-label="TikTok" title="抖音/TikTok"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        <a href="#" target="_blank" aria-label="微信" title="微信"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 01.213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 00.167-.054l1.903-1.114a.864.864 0 01.717-.098 10.16 10.16 0 002.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178A1.17 1.17 0 014.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 01-1.162 1.178 1.17 1.17 0 01-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 01.598.082l1.584.926a.272.272 0 00.14.045c.134 0 .24-.11.24-.245 0-.06-.024-.12-.04-.178l-.325-1.233a.491.491 0 01.177-.554C23.028 18.48 24 16.82 24 14.98c0-3.21-2.931-5.787-7.062-6.122zm-2.18 2.909c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982zm4.36 0c.535 0 .969.44.969.982a.976.976 0 01-.969.983.976.976 0 01-.969-.983c0-.542.434-.982.97-.982z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>快速链接</h4>
+      <ul>
+        <li><a href="index.html">首页</a></li>
+        <li><a href="products.html">产品中心</a></li>
+        <li><a href="brands.html">品牌馆</a></li>
+        <li><a href="services.html">清洁服务</a></li>
+        <li><a href="solutions.html">行业方案</a></li>
+        <li><a href="about.html">关于我们</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>产品分类</h4>
+      <ul>
+        <li><a href="products.html">洗地机</a></li>
+        <li><a href="products.html">吸尘器</a></li>
+        <li><a href="products.html">高压清洗机</a></li>
+        <li><a href="products.html">清洁剂/配件</a></li>
+        <li><a href="products.html">扫地机</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>联系方式</h4>
+      <ul class="contact">
+        <li>📧 <a href="mailto:michael@biocce.com">michael@biocce.com</a></li>
+        <li>📞 +86 21 5107 8500</li>
+        <li>💬 <a href="https://wa.me/8618621559605" target="_blank">+86 186 2155 9605</a></li>
+        <li>📍 上海市嘉定区</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 拜茨供应链（上海）有限公司 版权所有</div>
 </footer>
 
-</body></html</a>
-
-<div class="header"><div class="header-inner">
-  <a href="/" class="logo"><img src="images/logo.png" alt="拜茨清洁" width="40" height="40"></a>
-  <div class="search-bar">
-    <input type="text" placeholder="搜索产品、品牌、型号...">
-    <button>搜索</button>
-  </div>
-  <div class="header-actions">
-    <a href="#"><span class="icon">📋</span><span>询价单</span></a>
-    <a href="#"><span class="icon">🛒</span><span>购物车</span></a>
-    <a href="#"><span class="icon">👤</span><span>我的</span></a>
-  </div>
-</div></div>
-
-<div class="nav"><div class="nav-inner">
-  <a href="/" class="nav-item active">首页</a>
-  <a href="products.html" class="nav-item">产品中心</a>
-  <a href="brands.html" class="nav-item">品牌馆</a>
-  <a href="services.html" class="nav-item">清洁服务</a>
-  <a href="solutions.html" class="nav-item">行业方案</a>
-  <a href="about.html" class="nav-item">关于我们</a>
-  <a href="contact.html" class="nav-item">联系我们</a>
-  <span class="nav-hot">📞 +86 21 5107 8500</span>
-</div></div>
-
-<section class="hero"><div class="hero-inner">
-  <div class="hero-text">
-    <div class="tag">5大国际品牌 · 正品保障 · 工厂直供</div>
-    <h1>清洁设备·用品·服务<br>一站式采购平台</h1>
-    <p>汇聚BIOCCE、卡赫、力奇、高美、坦能等国内外知名品牌，提供洗地机、高压清洗机、工业吸尘器、清洁剂及配件全品类产品。B2B批量采购 / B2C零售 / 设备租赁 / 上门清洁服务。</p>
-    <div class="hero-btns">
-      <a href="products.html" class="btn btn-primary">查看全部产品 →</a>
-      <a href="services.html" class="btn btn-outline">预约清洁服务</a>
-    </div>
-  </div>
-</div></section>
-
-<!-- 全部分类 -->
-<section class="section"><div class="section-inner">
-  <div class="section-title"><h2>全部分类</h2><a href="products.html">全部分类 &rarr;</a></div>
-  <div class="cat-wrapper">
-    <div class="cat-row">
-      <a href="products.html#洗地机" class="cat-card eq"><div class="cicon">🧹</div><div class="cname">洗地机</div><div class="cdesc">手推式 · 驾驶式 · 地毯清洗机</div></a>
-      <a href="products.html#吸尘器" class="cat-card eq"><div class="cicon">💨</div><div class="cname">吸尘器</div><div class="cdesc">工业 · 商用 · 干湿两用</div></a>
-      <a href="products.html#高压清洗机" class="cat-card eq"><div class="cicon">💧</div><div class="cname">高压清洗机</div><div class="cdesc">冷水 · 热水 · 商用</div></a>
-      <a href="products.html#扫地机" class="cat-card eq"><div class="cicon">🌀</div><div class="cname">扫地机</div><div class="cdesc">手推式 · 驾驶式</div></a>
-      <a href="products.html#蒸汽清洗机" class="cat-card eq"><div class="cicon">🌫️</div><div class="cname">蒸汽清洗机</div><div class="cdesc">酒店餐饮 · 厨房深度清洁</div></a>
-    </div>
-    <div class="cat-row">
-      <a href="products.html#工业擦拭纸" class="cat-card con"><div class="cicon">🧻</div><div class="cname">工业擦拭纸/无尘布</div><div class="cdesc">擦拭纸 · 无尘布 · 工业抹布</div></a>
-      <a href="products.html#清洁剂" class="cat-card con"><div class="cicon">🧴</div><div class="cname">清洁剂</div><div class="cdesc">地面 · 地毯 · 不锈钢 · 玻璃</div></a>
-      <a href="products.html#配件" class="cat-card con"><div class="cicon">🔧</div><div class="cname">配件 &amp; 刷盘胶条</div><div class="cdesc">刷盘 · 胶条 · 滤芯 · 喷嘴</div></a>
-      <a href="products.html#清洁工具" class="cat-card tool"><div class="cicon">🧤</div><div class="cname">清洁工具</div><div class="cdesc">拖把 · 水桶 · 刮水器 · 垃圾车</div></a>
-      <a href="services.html" class="cat-card service"><div class="cicon">🧽</div><div class="cname">清洁服务</div><div class="cdesc">上门清洁 · 保洁套餐</div></a>
-    </div></div>
-  </div>
-</div></section>
-
-<section class="section" style="background:var(--card)"><div class="section-inner">
-  <div class="section-title"><h2>合作品牌</h2><a href="brands.html">品牌馆 &rarr;</a></div>
-  <div class="brand-showcase">
-    <div class="brand-card"><div class="bname karcher">KÄRCHER</div><div class="btag">德国卡赫 · 清洁设备全球领导者</div></div>
-    <div class="brand-card"><div class="bname biocce">BIOCCE</div><div class="btag">拜茨自营 · 源头工厂直供</div></div>
-    <div class="brand-card"><div class="bname nilfisk">NILFISK</div><div class="btag">丹麦力奇 · 专业清洁方案</div></div>
-    <div class="brand-card"><div class="bname comac">COMAC</div><div class="btag">意大利高美 · 高效清洁设备</div></div>
-    <div class="brand-card"><div class="bname tennant">TENNANT</div><div class="btag">美国坦能 · 可持续清洁技术</div></div>
-  </div>
-</div></section>
-
-<section class="section"><div class="section-inner">
-  <div class="section-title"><h2>清洁服务</h2><a href="services.html">了解更多 &rarr;</a></div>
-  <div class="service-grid">
-    <div class="service-card"><div class="sinfo"><div class="si">🧽</div><h3>上门清洁服务</h3><p>专业团队上门，提供地毯清洗、地面打蜡、深度保洁、工厂车间清洁。按面积报价，快速响应。</p></div></div>
-    <div class="service-card"><div class="sinfo"><div class="si">📋</div><h3>定期保洁套餐</h3><p>企业周/月/季度保洁方案，设备+人员+清洁剂一站式托管，降低管理成本。</p></div></div>
-  </div>
-</div></section>
-
-<section class="section" style="background:var(--card)"><div class="section-inner">
-  <div class="section-title"><h2>热门产品</h2><a href="products.html">查看更多 &rarr;</a></div>
-  <div class="prod-grid">
-    <div class="prod-card"><div class="pimg"><img src="images/product-bc1250.png" alt="BC1250" loading="lazy" width="300" height="300"></div><div class="pinfo"><div class="pbrand">BIOCCE 拜茨自营</div><div class="pname">驾驶式洗地机 BC1250</div><div class="pprice">¥40,599<small> 起</small></div><div class="pbtns"><a href="product/bc1250.html" class="inq">详情</span><a href="product/bc1250.html" class="buy">查看</span></div></div></div>
-    <div class="prod-card"><div class="pimg"><img src="images/product-bc1000.png" alt="BC1000" loading="lazy" width="300" height="300"></div><div class="pinfo"><div class="pbrand">BIOCCE 拜茨自营</div><div class="pname">驾驶式洗地机 BC1000</div><div class="pprice">¥29,999<small> 起</small></div><div class="pbtns"><a href="product/bc1000.html" class="inq">详情</span><a href="product/bc1000.html" class="buy">查看</span></div></div></div>
-    <div class="prod-card"><div class="pimg"><img src="images/product-bc600.png" alt="BC600" loading="lazy" width="300" height="300"></div><div class="pinfo"><div class="pbrand">BIOCCE 拜茨自营</div><div class="pname">手推式洗地机 BC600</div><div class="pprice">¥14,699<small> 起</small></div><div class="pbtns"><a href="product/bc600.html" class="inq">详情</span><a href="product/bc600.html" class="buy">查看</span></div></div></div>
-    <div class="prod-card"><div class="pimg"><img src="images/product-bc500.png" alt="BC500" loading="lazy" width="300" height="300"></div><div class="pinfo"><div class="pbrand">BIOCCE 拜茨自营</div><div class="pname">手推式洗地机 BC500</div><div class="pprice">¥9,499<small> 起</small></div><div class="pbtns"><a href="product/bc500.html" class="inq">详情</span><a href="product/bc500.html" class="buy">查看</span></div></div></div>
-  </div>
-</div></section>
-
-<section class="section"><div class="section-inner">
-  <div class="section-title"><h2>行业解决方案</h2><a href="solutions.html">全部 &rarr;</a></div>
-  <div class="sol-grid">
-    <div class="sol-card"><div class="si">🏭</div><h3>工厂车间</h3></div>
-    <div class="sol-card"><div class="si">🏬</div><h3>商场超市</h3></div>
-    <div class="sol-card"><div class="si">🏥</div><h3>医院学校</h3></div>
-    <div class="sol-card"><div class="si">🏨</div><h3>酒店餐饮</h3></div>
-    <div class="sol-card"><div class="si">📦</div><h3>仓储物流</h3></div>
-    <div class="sol-card"><div class="si">🚗</div><h3>汽车4S店</h3></div>
-    <div class="sol-card"><div class="si">🏠</div><h3>物业管理</h3></div>
-    <div class="sol-card"><div class="si">🏟️</div><h3>公共场所</h3></div>
-  </div>
-</div></section>
-
-<div class="feature-bar"><div class="feature-bar-inner">
-  <div><strong>🔒 正品保障</strong>5大品牌原厂授权</div>
-  <div><strong>🚚 全国配送</strong>物流直达全国</div>
-  <div><strong>🔧 售后无忧</strong>专业团队上门</div>
-  <div><strong>💰 价格透明</strong>批量采购更优</div>
-</div></div>
-
-<footer class="footer"><div class="footer-inner">
-  <div>
-    <h3>拜茨供应链（上海）有限公司</h3>
-    <p style="margin-top:8px">清洁设备·用品·服务一站式采购平台。汇聚BIOCCE、卡赫、力奇、高美、坦能等品牌，为工厂、物业、酒店、医院等提供全品类清洁产品及专业清洁服务。</p>
-    <p style="margin-top:10px;font-size:12px"><strong>📍</strong> 上海 · 中国</p>
-  </div>
-  <div>
-    <h4>快速链接</h4>
-    <ul><li><a href="/">首页</a></li><li><a href="products.html">产品中心</a></li><li><a href="brands.html">品牌馆</a></li><li><a href="services.html">清洁服务</a></li><li><a href="about.html">关于我们</a></li></ul>
-  </div>
-  <div>
-    <h4>产品分类</h4>
-    <ul><li><a href="products.html">洗地机</a></li><li><a href="products.html">吸尘器</a></li><li><a href="products.html">高压清洗机</a></li><li><a href="products.html">清洁剂/配件</a></li><li><a href="products.html">扫地机</a></li></ul>
-  </div>
-  <div>
-    <h4>联系方式</h4>
-    <ul class="contact">
-      <li>📧 <a href="mailto:michael@biocce.com">michael@biocce.com</a></li>
-      <li>📞 +86 21 5107 8500</li>
-      <li>📍 上海市</li>
-    </ul>
-  </div>
-</div>
-<div class="footer-bottom">© 2026 拜茨供应链（上海）有限公司 版权所有</div>
-</footer>
-
-</body></html>
+<script src="js/main.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TF95LBYRV"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-8TF95LBYRV');</script>
+<!-- Meta Pixel -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1335346435408082');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1335346435408082&ev=PageView&noscript=1"/></noscript>
+</body>
+</html>
